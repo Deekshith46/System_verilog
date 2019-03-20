@@ -801,9 +801,43 @@ module test;
 endmodule*/
 
 
+//////////////////////////////CONSTRAINTS//////////////////////////////
 
+    //Syntax:
+        //constraint constraint_identifier
+                                    //{constraint expression;}
 
+ 
 
+////////////Simple Range Constraints//////////////////
+
+/*
+class simple_range;
+
+    rand bit[31:0] addr;
+    rand bit[31:0] data;
+
+    constraint c1{addr inside {[0:15]};}
+
+    function void display(input string tag);
+        $display("[%0s] The addr = %0d and data = %0d",tag,addr,data);
+    endfunction
+
+endclass
+
+module tb;
+    simple_range simple;
+
+        initial begin
+        repeat(20)
+            begin
+
+            simple = new();
+            simple.randomize();
+            simple.display("simple_rang");   
+            end
+        end
+endmodule*/
 
 
 

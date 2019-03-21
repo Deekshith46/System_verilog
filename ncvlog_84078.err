@@ -1,0 +1,243 @@
+csi-ncvlog - CSI: Command line:
+ncvlog
+    -f /home/vv2trainee2/Desktop/Deekshith/vivartan/system_verilog/System_verilog/INCA_libs/irun.lnx8664.15.20.nc/ncvlog.args
+        -XLMODE ./INCA_libs/irun.lnx8664.15.20.nc
+        -RUNMODE
+        man.sv
+        -CDSLIB ./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+        -HDLVAR ./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+        -MESSAGES
+        -UPDATE
+        -XLLIBSTORE ./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+        -ALLOWUNBOUND
+    -CHECK_VERSION TOOL:	irun(64)	15.20-s051
+    -LOG_FD 4
+
+csi-ncvlog - CSI: *F,INTERR: INTERNAL EXCEPTION
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	ncvlog(64)	15.20-s051
+  HOSTNAME: compute-srv2.eda.atme.in
+  OPERATING SYSTEM: Linux 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64
+  MESSAGE: $unit reference into unsupported scope
+-----------------------------------------------------------------
+
+csi-ncvlog - CSI: Cadence Support Investigation, recording details
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 4
+	Decompile: $unit_0x665cf668
+	Source  : module tb;
+	Position:     ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 4
+	Scope: $unit_0x665cf668
+	Decompile: $unit_0x665cf668
+	Source  : module tb;
+	Position:     ^
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 4
+	Decompile: $unit_0x665cf668
+	Source  : module tb;
+	Position:     ^
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.tb:sv (VST)
+	File: man.sv, line 1102, position 8
+	Scope: tb
+	Decompile: tb
+	Source  : module tb;
+	Position:         ^
+Verilog Syntax Tree: mailbox type (VST_T_MAILBOX) in module worklib.tb:sv (VST)
+	Scope: tb
+	Decompile: unable to decompile type 834
+Verilog Syntax Tree: sequential block statement (VST_S_SEQ_BLOCK) in module worklib.tb:sv (VST)
+	File: man.sv, line 1107, position 16
+	Scope: tb
+	Source  :     initial begin
+	Position:                 ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 42
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: string tag
+	Source  :      function void display(input string tag);
+	Position:                                           ^
+Verilog Syntax Tree: named connection expression (VST_E_NAMED_CONNECTION) in module worklib.tb:sv (VST)
+	File: man.sv, line 1119, position 20
+	Decompile: named connection
+	Source  :     drv.display("drv");
+	Position:                     ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 4
+	Scope: $unit_0x665cf668
+	Decompile: $unit_0x665cf668
+	Source  : module tb;
+	Position:     ^
+Verilog Syntax Tree: named connection expression (VST_E_NAMED_CONNECTION) in module worklib.tb:sv (VST)
+	File: man.sv, line 1119, position 20
+	Decompile: named connection
+	Source  :     drv.display("drv");
+	Position:                     ^
+Verilog Syntax Tree: string type (VST_T_STRING) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: string
+Verilog Syntax Tree: string expression (VST_E_STRING) in module worklib.tb:sv (VST)
+	File: man.sv, line 1119, position 20
+	Decompile: "drv"
+	Source  :     drv.display("drv");
+	Position:                     ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 42
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: string tag
+	Source  :      function void display(input string tag);
+	Position:                                           ^
+Verilog Syntax Tree: referral into class (VST_R_INTO_CLASS) in module worklib.tb:sv (VST)
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: $unit_0x665cf668::driver
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 25
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: display
+	Source  :      function void display(input string tag);
+	Position:                          ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 42
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: string tag
+	Source  :      function void display(input string tag);
+	Position:                                           ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in module worklib.tb:sv (VST)
+	File: man.sv, line 1104, position 9
+	Scope: tb
+	Decompile: $unit_0x665cf668::driver
+	Source  :     driver drv;
+	Position:          ^
+Intermediate File: string (IF_STRING) in module worklib.tb:sv (VST)
+	Decompile: tb
+Intermediate File: root (IF_ROOT) in module worklib.tb:sv (VST)
+Verilog Syntax Tree: module declaration (VST_D_MODULE) in module worklib.tb:sv (VST)
+	File: man.sv, line 1102, position 8
+	Scope: tb
+	Decompile: tb
+	Source  : module tb;
+	Position:         ^
+Verilog Syntax Tree: root (VST_ROOT) in module worklib.tb:sv (VST)
+	File: man.sv, line 1102, position 5
+	Decompile: tb
+	Source  : module tb;
+	Position:      ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 4
+	Scope: $unit_0x665cf668
+	Decompile: $unit_0x665cf668
+	Source  : module tb;
+	Position:     ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in module worklib.tb:sv (VST)
+	File: man.sv, line 1104, position 9
+	Scope: tb
+	Decompile: $unit_0x665cf668::driver
+	Source  :     driver drv;
+	Position:          ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in module worklib.tb:sv (VST)
+	File: man.sv, line 1105, position 14
+	Scope: tb
+	Decompile: unable to decompile type 834 mbx
+	Source  :     mailbox mbx;
+	Position:               ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.tb:sv (VST)
+	File: man.sv, line 1108, position 6
+	Scope: tb
+	Decompile: mbx
+	Source  :     mbx = new();
+	Position:       ^
+Verilog Syntax Tree: mailbox type (VST_T_MAILBOX) in module worklib.tb:sv (VST)
+	Scope: tb
+	Decompile: unable to decompile type 834
+Verilog Syntax Tree: string expression (VST_E_STRING) in module worklib.tb:sv (VST)
+	File: man.sv, line 1119, position 20
+	Decompile: "drv"
+	Source  :     drv.display("drv");
+	Position:                     ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 25
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: display
+	Source  :      function void display(input string tag);
+	Position:                          ^
+Verilog Syntax Tree: system task enable statement (VST_S_SYSTEM_TASK_ENABLE) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1097, position 15
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: $display
+	Source  :         $display("[%0s] The valu of ds = %0d",tag,ds);
+	Position:                ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 25
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: display
+	Source  :      function void display(input string tag);
+	Position:                          ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 42
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: string tag
+	Source  :      function void display(input string tag);
+	Position:                                           ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1096, position 25
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: display
+	Source  :      function void display(input string tag);
+	Position:                          ^
+Verilog Syntax Tree: string type (VST_T_STRING) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	Scope: $unit_0x665cf668::driver::display
+	Decompile: string
+Verilog Syntax Tree: string expression (VST_E_STRING) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1097, position 44
+	Decompile: "[%0s] The valu of ds = %0d"
+	Source  :         $display("[%0s] The valu of ds = %0d",tag,ds);
+	Position:                                             ^
+Intermediate File: string (IF_STRING) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	Decompile: ds
+Verilog Syntax Tree: task enable statement (VST_S_TASK_ENABLE) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1091, position 18
+	Scope: $unit_0x665cf668::driver::run
+	Decompile: unable to decompile type 651
+	Source  :             mbx.get(ds);
+	Position:                   ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 14
+	Scope: $unit_0x665cf668::generator::new
+	Decompile: new
+	Source  : module tb;
+	Position:               ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 4
+	Scope: $unit_0x665cf668
+	Decompile: $unit_0x665cf668
+	Source  : module tb;
+	Position:     ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1102, position 14
+	Scope: $unit_0x665cf668::generator::new
+	Decompile: new
+	Source  : module tb;
+	Position:               ^
+Intermediate File: root (IF_ROOT) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+Verilog Syntax Tree: string expression (VST_E_STRING) in compilation_unit worklib.\$unit_0x665cf668 :compilation_unit (VST)
+	File: man.sv, line 1097, position 44
+	Decompile: "[%0s] The valu of ds = %0d"
+	Source  :         $display("[%0s] The valu of ds = %0d",tag,ds);
+	Position:                                             ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in module worklib.tb:sv (VST)
+	File: man.sv, line 1105, position 14
+	Scope: tb
+	Decompile: unable to decompile type 834 mbx
+	Source  :     mailbox mbx;
+	Position:               ^
+Verilog Syntax Tree: root (VST_ROOT) in module worklib.tb:sv (VST)
+	File: man.sv, line 1102, position 5
+	Decompile: tb
+	Source  : module tb;
+	Position:      ^
+csi-ncvlog - CSI: investigation complete took 0.067 secs, send this file to Cadence Support

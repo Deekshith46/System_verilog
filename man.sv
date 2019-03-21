@@ -809,10 +809,10 @@ endmodule*/
 
  
 
-////////////Simple Range Constraints//////////////////
+////////////////////////////////////Simple Range Constraints/////////////////////////////////
 
-/*
-class simple_range;
+
+/*class simple_range;
 
     rand bit[31:0] addr;
     rand bit[31:0] data;
@@ -839,8 +839,301 @@ module tb;
         end
 endmodule*/
 
+/////////////////////////////////////////equality_constraints///////////////////////////
+
+/*
+class equality_constraints;
+
+    rand int addr;
+    rand int data;
+
+    constraint c2{data == 8'hAA;}
+
+    function void display(input string tag);
+        $display("[%0s] The value of addr = %0d , data = %0d" , tag,addr,data);
+    endfunction
+
+endclass
+
+module tb;
+    equality_constraints equ;
+
+        initial begin
+            repeat(10)
+                begin
+            equ = new();
+            equ.randomize();
+            equ.display("equality_constraints");
+                end
+        end
+endmodule*/
+
+///////////////////////////////////INISIDE CONSTRAINTS//////////////////////////////////////
+
+/*
+class inside_constraint;
+
+    rand int addr;
+    rand int data;
+
+    constraint c2{addr inside {1,3,5,7};}
+
+    function void display(input string tag);
+        $display("[%0s] The value of addr = %0d , data = %0d" , tag,addr,data);
+    endfunction
+
+endclass
+
+module tb;
+    inside_constraint inside1 ;
+
+        initial begin
+            repeat(10)
+                begin
+            inside1 = new();
+            inside1.randomize();
+            inside1.display("inside_constraint");
+                end
+        end
+endmodule*/
+
+/////////////////////////////////IMPLICATION CONSTRAINTS///////////////////////////////
+
+/*
+class implication_constraints;
+        rand int addr;
+        int data;
+
+        constraint c5 {if(data) addr inside {[0:99]};}
+
+        function void display(input string tag);
+            $display("[%0s] the value is Data= %0d , addr=%0d",tag,data,addr);
+        endfunction
+    
+endclass
+
+module tb;
+    implication_constraints imp;
+
+    initial begin
+        repeat(10) begin
+        imp = new();
+        imp.data = 1'b1;
+        imp.randomize();
+        imp.display("implication_constraints");
+        end
+    end
+    
+endmodule*/
+
+/*
+class distrubuted;
+    rand int data;
+    rand int addr;
+
+    constraint c5{data dist{[0:48] :/ 80 , [50:100] :/ 20};}
+
+     function void display(input string tag);
+            $display("[%0s] the value is Data= %0d , addr=%0d",tag,data,addr);
+        endfunction
+
+endclass
+
+module tb;
+    distrubuted dist1;
+
+    initial begin
+         repeat(10) begin
+        dist1 = new();
+        dist1.data = 1'b1;
+        dist1.randomize();
+        dist1.display("distrubuted");
+        end
+
+    end
+
+endmodule*/
+
+/*
+class distrubuted;
+    rand int data;
+    rand int addr;
+
+    constraint c5{data dist{[0:48] := 80 , [50:100] := 20};}
+
+     function void display(input string tag);
+            $display("[%0s] the value is Data= %0d , addr=%0d",tag,data,addr);
+        endfunction
+
+endclass
+
+module tb;
+    distrubuted dist1;
+
+    initial begin
+         repeat(10) begin
+        dist1 = new();
+        dist1.data = 1'b1;
+        dist1.randomize();
+        dist1.display("distrubuted");
+        end
+
+    end
+
+endmodule*/
+
+///////////////////////////////////////THREADS/////////////////////////////////////////
+
+////////FORK_JOIN
+
+  /*
+  module tb;
+        initial begin
+            #10;
+            fork
+                begin
+                    #20;
+                end
+
+                begin
+                    #40;
+                end
+
+                begin
+                    #30;
+                end
+             join
+             $display("exit is at time t = %0t",$time);
+        end    
+   endmodule*/
 
 
+/////////////////////////////fork_join_any/////////////////////////
 
+   /* module tb;
+        initial begin
+            #10;
+            fork
+                begin
+                    #20;
+                end
+
+                begin
+                    #40;
+                end
+
+                begin
+                    #30;
+                end
+             join_any
+             $display("exit is at time t = %0t",$time);
+        end    
+   endmodule*/
+
+//////////////////////////////fork_join_none////////////////////
+
+/*
+module tb;
+        initial begin
+            #10;
+            fork
+                begin
+                    #20;
+                end
+
+                begin
+                    #40;
+                end
+
+                begin
+                    #30;
+                end
+             join_none
+             $display("exit is at time t = %0t",$time);
+        end    
+   endmodule*/
+
+//////////////////////////Mailbox////////////////////
+
+/*class generator;
+    int data =14;
+    mailbox mbx ;
+
+    function new(mailbox mbx);
+        this.mbx = mbx;
+    endfunction
+
+    task run();
+
+        fork
+        
+            mbx.put(data);
+        join
+       
+     endtask
+
+     function void display(input string tag);
+        $display("[%0s] The valu of data = %0d",tag,data);
+     endfunction
+
+   endclass
+   
+class driver;
+    int ds;
+    mailbox mbx ;
+
+    function new(mailbox mbx);
+        this.mbx = mbx;
+    endfunction
+
+    task run();
+        fork
+            mbx.get(ds);
+            $display("DS=%0d",ds);
+        join
+     endtask
+
+     function void display(input string tag);
+        $display("[%0s] The valu of ds = %0d",tag,ds);
+     endfunction
+
+   endclass
+
+module tb;
+    generator gen;
+    driver drv;
+    mailbox mbx;
+
+    initial begin
+    mbx = new();
+    gen = new(mbx);
+    drv = new(mbx);
+
+    gen.run();
+    drv.run();
+
+    gen.display("Gen");
+    drv.display("drv");
+    end
+endmodule*/
+
+///////////////////////////////////EVENT///////////////////////////////
+
+/*
+module tb;
+    event my_event;
+
+    initial begin
+        $display("[%0t] process A :waiting for my_event",$time);
+        @(my_event);
+        $display("[%0t] process A : my_event has been triggered",$time);
+    end
+
+    initial begin
+        #20;
+        $display("[%0t] process B :triggering my_event",$time);
+        -> my_event;
+    end
+endmodule*/
 
 

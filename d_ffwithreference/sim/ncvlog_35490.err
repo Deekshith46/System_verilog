@@ -1,0 +1,518 @@
+csi-ncvlog - CSI: Command line:
+ncvlog
+    -f /home/vv2trainee2/Desktop/Deekshith/vivartan/system_verilog/sys/d_ff/sim/INCA_libs/irun.lnx8664.15.20.nc/ncvlog.args
+        -XLMODE ./INCA_libs/irun.lnx8664.15.20.nc
+        -RUNMODE
+        ../rtl/d_ff.v
+        ../verification/Transaction.sv
+        ../verification/generator.sv
+        ../verification/interface.sv
+        ../verification/driver.sv
+        ../verification/monitor.sv
+        ../verification/reference.sv
+        ../verification/scoboard.sv
+        ../verification/environment.sv
+        ../verification/test.sv
+        -CDSLIB ./INCA_libs/irun.lnx8664.15.20.nc/cdsrun.lib
+        -HDLVAR ./INCA_libs/irun.lnx8664.15.20.nc/hdlrun.var
+        -MESSAGES
+        -UPDATE
+        -XLLIBSTORE ./INCA_libs/irun.lnx8664.15.20.nc/xllibs
+        -ALLOWUNBOUND
+    -CHECK_VERSION TOOL:	irun(64)	15.20-s051
+    -LOG_FD 4
+
+csi-ncvlog - CSI: *F,INTERR: INTERNAL EXCEPTION
+-----------------------------------------------------------------
+The tool has encountered an unexpected condition and must exit.
+Contact Cadence Design Systems customer support about this
+problem and provide enough information to help us reproduce it,
+including the logfile that contains this error message.
+  TOOL:	ncvlog(64)	15.20-s051
+  HOSTNAME: compute-srv2.eda.atme.in
+  OPERATING SYSTEM: Linux 3.10.0-1160.49.1.el7.x86_64 #1 SMP Tue Nov 30 15:51:32 UTC 2021 x86_64
+  MESSAGE: vst_identifier () - bad class, class 843
+-----------------------------------------------------------------
+
+csi-ncvlog - CSI: Cadence Support Investigation, recording details
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Scope: $unit_0x114fa952
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: referral into class (VST_R_INTO_CLASS) in module worklib.tb:sv (VST)
+	Scope: $unit_0x114fa952::environment
+	Decompile: $unit_0x114fa952::environment
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in module worklib.tb:sv (VST)
+	File: ../verification/Transaction.sv, line 16, position 10
+	Scope: tb
+	Decompile: env
+	Source  : endclass
+	Position:           ^
+Verilog Syntax Tree: new expression (VST_E_NEW) in module worklib.tb:sv (VST)
+	File: ../verification/Transaction.sv, line 15, position 16
+	Scope: tb
+	Decompile: new ()
+	Source  :     
+	Position:                 ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in module worklib.tb:sv (VST)
+	File: ../verification/Transaction.sv, line 12, position 14
+	Scope: tb
+	Decompile: $unit_0x114fa952::environment
+	Source  :     function void display(input string tag);
+	Position:               ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in module worklib.tb:sv (VST)
+	File: ../verification/Transaction.sv, line 12, position 18
+	Scope: tb
+	Decompile: $unit_0x114fa952::environment env
+	Source  :     function void display(input string tag);
+	Position:                   ^
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Scope: $unit_0x114fa952
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: unknown expression (VST_E_UNKNOWN) in module worklib.tb:sv (VST)
+	File: ../verification/Transaction.sv, line 10, position 33
+	Scope: tb
+	Decompile: dif.clk
+	Source  :     endfunction
+	Position:                                  ^
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 2, position 16
+	Scope: $unit_0x114fa952::environment
+	Decompile: $unit_0x114fa952::environment
+	Source  : class environment;
+	Position:                 ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Scope: $unit_0x114fa952
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 2, position 16
+	Scope: $unit_0x114fa952::environment
+	Decompile: $unit_0x114fa952::environment
+	Source  : class environment;
+	Position:                 ^
+Verilog Syntax Tree: virtual interface type (VST_T_VIRTUAL_IFC) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: virtual interface dff
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: blocking assignment statement (VST_S_BLOCKING_ASSIGNMENT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 26, position 14
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         msmbx = new();
+	Position:               ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: sequential block statement (VST_S_SEQ_BLOCK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 19, position 14
+	Scope: $unit_0x114fa952::environment::new
+	Source  :         mbx_drv = new();
+	Position:               ^
+Verilog Syntax Tree: blocking assignment statement (VST_S_BLOCKING_ASSIGNMENT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 26, position 14
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         msmbx = new();
+	Position:               ^
+Verilog Syntax Tree: blocking assignment statement (VST_S_BLOCKING_ASSIGNMENT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 26, position 14
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         msmbx = new();
+	Position:               ^
+Verilog Syntax Tree: new expression (VST_E_NEW) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 25, position 16
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         drv = new(dif ,mbx_drv);
+	Position:                 ^
+Verilog Syntax Tree: explicit event statement (VST_S_EXPLICIT_EVENT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 30, position 20
+	Scope: $unit_0x114fa952::scoboard::run
+	Decompile: unable to decompile type 648
+	Source  :                    -> sconext;
+	Position:                     ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 15, position 11
+	Scope: $unit_0x114fa952::scoboard::run
+	Decompile: run
+	Source  :     task run();
+	Position:            ^
+Verilog Syntax Tree: method task enable statement (VST_S_METHOD_TASK_ENABLE) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 28, position 36
+	Scope: $unit_0x114fa952::scoboard::run
+	Decompile: unable to decompile type 775
+	Source  :                     trans_ref.display("REF TO SCO");
+	Position:                                     ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 12, position 24
+	Scope: $unit_0x114fa952::transaction::display
+	Decompile: display
+	Source  :     function void display(input string tag);
+	Position:                         ^
+Verilog Syntax Tree: method task enable statement (VST_S_METHOD_TASK_ENABLE) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 28, position 36
+	Scope: $unit_0x114fa952::scoboard::run
+	Decompile: unable to decompile type 775
+	Source  :                     trans_ref.display("REF TO SCO");
+	Position:                                     ^
+Verilog Syntax Tree: explicit event statement (VST_S_EXPLICIT_EVENT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 30, position 20
+	Scope: $unit_0x114fa952::scoboard::run
+	Decompile: unable to decompile type 648
+	Source  :                    -> sconext;
+	Position:                     ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: new expression (VST_E_NEW) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 26, position 18
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         msmbx = new();
+	Position:                   ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: blocking assignment statement (VST_S_BLOCKING_ASSIGNMENT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 26, position 14
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         msmbx = new();
+	Position:               ^
+Verilog Syntax Tree: new expression (VST_E_NEW) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 25, position 16
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         drv = new(dif ,mbx_drv);
+	Position:                 ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/driver.sv, line 7, position 15
+	Scope: $unit_0x114fa952::driver::new
+	Decompile: new
+	Source  :     function new( virtual dff dif , mailbox #(transaction) mbx);
+	Position:                ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/driver.sv, line 1, position 11
+	Scope: $unit_0x114fa952::driver
+	Decompile: $unit_0x114fa952::driver
+	Source  : class driver;
+	Position:            ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/driver.sv, line 7, position 61
+	Scope: $unit_0x114fa952::driver::new
+	Decompile: unable to decompile type 834 mbx
+	Source  :     function new( virtual dff dif , mailbox #(transaction) mbx);
+	Position:                                                              ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: datatype of (VST_T_DATATYPE_OF) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 25, position 10
+	Decompile: unable to decompile type 859
+	Source  :         drv = new(dif ,mbx_drv);
+	Position:           ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Intermediate File: string (IF_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Decompile: msmbx
+Verilog Syntax Tree: class declaration (VST_D_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 2, position 16
+	Scope: $unit_0x114fa952::environment
+	Decompile: $unit_0x114fa952::environment
+	Source  : class environment;
+	Position:                 ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 18, position 15
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new
+	Source  :     function new(virtual dff dif);
+	Position:                ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Scope: $unit_0x114fa952
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 4, position 13
+	Scope: $unit_0x114fa952::environment
+	Decompile: $unit_0x114fa952::driver drv
+	Source  :     driver drv;
+	Position:              ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 25, position 29
+	Scope: $unit_0x114fa952::environment
+	Decompile: mbx_drv
+	Source  :         drv = new(dif ,mbx_drv);
+	Position:                              ^
+Verilog Syntax Tree: compilation unit declaration (VST_D_COMP_UNIT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Scope: $unit_0x114fa952
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 4, position 9
+	Scope: $unit_0x114fa952::environment
+	Decompile: $unit_0x114fa952::driver
+	Source  :     driver drv;
+	Position:          ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 4, position 13
+	Scope: $unit_0x114fa952::environment
+	Decompile: $unit_0x114fa952::driver drv
+	Source  :     driver drv;
+	Position:              ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 3, position 35
+	Scope: $unit_0x114fa952::scoboard
+	Decompile: $unit_0x114fa952::transaction trans_ref
+	Source  :     transaction trans_mon, trans_ref;
+	Position:                                    ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 15, position 11
+	Scope: $unit_0x114fa952::scoboard::run
+	Decompile: run
+	Source  :     task run();
+	Position:            ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 3, position 14
+	Scope: $unit_0x114fa952::scoboard
+	Decompile: $unit_0x114fa952::transaction
+	Source  :     transaction trans_mon, trans_ref;
+	Position:               ^
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 22, position 45
+	Scope: $unit_0x114fa952::scoboard
+	Decompile: trans_ref
+	Source  :                 if(trans_mon.dout == trans_ref.din)
+	Position:                                              ^
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 15, position 11
+	Scope: $unit_0x114fa952::scoboard::run
+	Decompile: run
+	Source  :     task run();
+	Position:            ^
+Intermediate File: string (IF_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Decompile: din
+Verilog Syntax Tree: class select expression (VST_E_CLASS_SELECT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 22, position 49
+	Scope: $unit_0x114fa952::transaction
+	Decompile: trans_ref.din
+	Source  :                 if(trans_mon.dout == trans_ref.din)
+	Position:                                                  ^
+Verilog Syntax Tree: unknown expression (VST_E_UNKNOWN) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 16, position 34
+	Scope: $unit_0x114fa952::monitor::run
+	Decompile: dif.clk
+	Source  :         repeat(2) @(posedge dif.clk);
+	Position:                                   ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 3, position 14
+	Scope: $unit_0x114fa952::scoboard
+	Decompile: $unit_0x114fa952::transaction
+	Source  :     transaction trans_mon, trans_ref;
+	Position:               ^
+Verilog Syntax Tree: referral into class (VST_R_INTO_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Scope: $unit_0x114fa952::transaction
+	Decompile: $unit_0x114fa952::transaction
+Verilog Syntax Tree: identifier expression (VST_E_IDENTIFIER) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 22, position 45
+	Scope: $unit_0x114fa952::scoboard
+	Decompile: trans_ref
+	Source  :                 if(trans_mon.dout == trans_ref.din)
+	Position:                                              ^
+Verilog Syntax Tree: class select expression (VST_E_CLASS_SELECT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 22, position 49
+	Scope: $unit_0x114fa952::transaction
+	Decompile: trans_ref.din
+	Source  :                 if(trans_mon.dout == trans_ref.din)
+	Position:                                                  ^
+Verilog Syntax Tree: class type (VST_T_CLASS) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 3, position 14
+	Scope: $unit_0x114fa952::scoboard
+	Decompile: $unit_0x114fa952::transaction
+	Source  :     transaction trans_mon, trans_ref;
+	Position:               ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 3, position 15
+	Scope: $unit_0x114fa952::transaction
+	Decompile: bit din
+	Source  :     rand bit din;
+	Position:                ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 3, position 35
+	Scope: $unit_0x114fa952::scoboard
+	Decompile: $unit_0x114fa952::transaction trans_ref
+	Source  :     transaction trans_mon, trans_ref;
+	Position:                                    ^
+Verilog Syntax Tree: virtual interface type (VST_T_VIRTUAL_IFC) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Scope: $unit_0x114fa952::monitor
+	Decompile: virtual interface dff
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 13, position 11
+	Scope: $unit_0x114fa952::monitor::run
+	Decompile: run
+	Source  :     task run();
+	Position:            ^
+Intermediate File: string (IF_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Decompile: dif
+Verilog Syntax Tree: unknown expression (VST_E_UNKNOWN) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 16, position 34
+	Scope: $unit_0x114fa952::monitor::run
+	Decompile: dif.clk
+	Source  :         repeat(2) @(posedge dif.clk);
+	Position:                                   ^
+Verilog Syntax Tree: string (VST_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Decompile: unable to decompile type 878
+Verilog Syntax Tree: instance declaration (VST_D_INSTANCE) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 5, position 14
+	Scope: $unit_0x114fa952::monitor
+	Decompile: virtual_interface_declaration_2
+	Source  :     virtual dff dif;
+	Position:               ^
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 5, position 18
+	Scope: $unit_0x114fa952::monitor
+	Decompile: virtual interface dff dif
+	Source  :     virtual dff dif;
+	Position:                   ^
+Verilog Syntax Tree: virtual interface type (VST_T_VIRTUAL_IFC) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Scope: $unit_0x114fa952::monitor
+	Decompile: virtual interface dff
+Verilog Syntax Tree: task declaration (VST_D_TASK) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 13, position 11
+	Scope: $unit_0x114fa952::monitor::run
+	Decompile: run
+	Source  :     task run();
+	Position:            ^
+Verilog Syntax Tree: string (VST_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Decompile: unable to decompile type 878
+Verilog Syntax Tree: register declaration (VST_D_REG) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 5, position 18
+	Scope: $unit_0x114fa952::monitor
+	Decompile: virtual interface dff dif
+	Source  :     virtual dff dif;
+	Position:                   ^
+Verilog Syntax Tree: unknown expression (VST_E_UNKNOWN) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 16, position 34
+	Scope: $unit_0x114fa952::monitor::run
+	Decompile: dif.clk
+	Source  :         repeat(2) @(posedge dif.clk);
+	Position:                                   ^
+Intermediate File: string (IF_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Decompile: clk
+Verilog Syntax Tree: string expression (VST_E_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/scoboard.sv, line 28, position 49
+	Decompile: "REF TO SCO"
+	Source  :                     trans_ref.display("REF TO SCO");
+	Position:                                                  ^
+Verilog Syntax Tree: virtual interface type (VST_T_VIRTUAL_IFC) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: virtual interface dff
+Verilog Syntax Tree: number expression (VST_E_NUMBER) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/generator.sv, line 18, position 4094
+	Decompile: 0
+	Source  :                 assert(trans.randomize)
+Verilog Syntax Tree: number expression (VST_E_NUMBER) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/generator.sv, line 18, position 4094
+	Decompile: 3
+	Source  :                 assert(trans.randomize)
+Verilog Syntax Tree: blocking assignment statement (VST_S_BLOCKING_ASSIGNMENT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 26, position 14
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         msmbx = new();
+	Position:               ^
+Intermediate File: root (IF_ROOT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+Verilog Syntax Tree: new expression (VST_E_NEW) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/environment.sv, line 26, position 18
+	Scope: $unit_0x114fa952::environment::new
+	Decompile: new ()
+	Source  :         msmbx = new();
+	Position:                   ^
+Verilog Syntax Tree: string (VST_STRING) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	Decompile: unable to decompile type 878
+Verilog Syntax Tree: unknown expression (VST_E_UNKNOWN) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/monitor.sv, line 16, position 34
+	Scope: $unit_0x114fa952::monitor::run
+	Decompile: dif.clk
+	Source  :         repeat(2) @(posedge dif.clk);
+	Position:                                   ^
+Verilog Syntax Tree: root (VST_ROOT) in compilation_unit worklib.\$unit_0x114fa952 :compilation_unit (VST)
+	File: ../verification/Transaction.sv, line 1, position 4
+	Decompile: $unit_0x114fa952
+	Source  : class transaction;
+	Position:     ^
+Intermediate File: root (IF_ROOT) in module worklib.tb:sv (VST)
+Verilog Syntax Tree: sfilea (VST_SFILEA) in module worklib.tb:sv (VST)
+	Decompile: unable to decompile type 680
+Intermediate File: data block (IF_BLK) in module worklib.tb:sv (VST)
+csi-ncvlog - CSI: investigation complete took 0.071 secs, send this file to Cadence Support

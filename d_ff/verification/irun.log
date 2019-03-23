@@ -1,0 +1,110 @@
+irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
+TOOL:	irun(64)	15.20-s051: Started on Mar 24, 2019 at 00:31:38 IST
+irun
+	-access +rwc
+	test.sv
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+file: test.sv
+    transaction trans transref;
+                             |
+ncvlog: *E,EXPSMC (scoboard.sv,2|29): expecting a semicolon (';') [3.2.2(IEEE)].
+(`include file: scoboard.sv line 2, `include file: environment.sv line 5, file: test.sv line 1)
+    mailbox #(transaction) mbx;
+                        |
+ncvlog: *E,SVNOTY (scoboard.sv,3|24): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: scoboard.sv line 3, `include file: environment.sv line 5, file: test.sv line 1)
+    mailbox #(transaction) mbxref;
+                        |
+ncvlog: *E,SVNOTY (scoboard.sv,4|24): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: scoboard.sv line 4, `include file: environment.sv line 5, file: test.sv line 1)
+    function new( mailbox #(transaction) mbx , mailbox #(transaction) mbxref);
+                                      |
+ncvlog: *E,SVNOTY (scoboard.sv,7|38): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: scoboard.sv line 7, `include file: environment.sv line 5, file: test.sv line 1)
+    function new( mailbox #(transaction) mbx , mailbox #(transaction) mbxref);
+                                                     |
+ncvlog: *E,EXPCORP (scoboard.sv,7|53): Expecting a ',' or ')' [12.3.2(IEEE)].
+(`include file: scoboard.sv line 7, `include file: environment.sv line 5, file: test.sv line 1)
+    function new( mailbox #(transaction) mbx , mailbox #(transaction) mbxref);
+                                                       |
+ncvlog: *E,EXPCORP (scoboard.sv,7|55): Expecting a ',' or ')' [A.1.4(IEEE-2001)].
+(`include file: scoboard.sv line 7, `include file: environment.sv line 5, file: test.sv line 1)
+    function new( mailbox #(transaction) mbx , mailbox #(transaction) mbxref);
+                                                                           |
+ncvlog: *E,EXPSMC (scoboard.sv,7|75): expecting a semicolon (';') [3.10(IEEE)].
+(`include file: scoboard.sv line 7, `include file: environment.sv line 5, file: test.sv line 1)
+                    $display("[SCO]: DATA MISS MATCHED");
+                           |
+ncvlog: *E,MISEXX (scoboard.sv,22|27): expecting an '=' or '<=' sign in an assignment [9.2(IEEE)].
+(`include file: scoboard.sv line 22, `include file: environment.sv line 5, file: test.sv line 1)
+    generator gen;
+            |
+ncvlog: *E,NOIPRT (environment.sv,8|12): Unrecognized declaration 'generator' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: environment.sv line 8, file: test.sv line 1)
+    driver drv;
+         |
+ncvlog: *E,NOIPRT (environment.sv,9|9): Unrecognized declaration 'driver' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: environment.sv line 9, file: test.sv line 1)
+    monitor mon;
+          |
+ncvlog: *E,NOIPRT (environment.sv,10|10): Unrecognized declaration 'monitor' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: environment.sv line 10, file: test.sv line 1)
+    scoboard sco;
+           |
+ncvlog: *E,NOIPRT (environment.sv,11|11): Unrecognized declaration 'scoboard' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+(`include file: environment.sv line 11, file: test.sv line 1)
+    mailbox #(transaction) gdmbx;
+                        |
+ncvlog: *E,SVNOTY (environment.sv,15|24): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: environment.sv line 15, file: test.sv line 1)
+    mailbox #(transaction) msmbx;
+                        |
+ncvlog: *E,SVNOTY (environment.sv,16|24): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: environment.sv line 16, file: test.sv line 1)
+    mailbox #(transaction) mbref;
+                        |
+ncvlog: *E,SVNOTY (environment.sv,17|24): Syntactically this identifier appears to begin a datatype but it does not refer to a visible datatype in the current scope.
+(`include file: environment.sv line 17, file: test.sv line 1)
+    environment env;
+                  |
+ncvlog: *E,NOIPRT (test.sv,14|18): Unrecognized declaration 'env' could be an unsupported keyword, a spelling mistake or missing instance port list '()' [SystemVerilog].
+	module worklib.tb:sv
+		errors: 1, warnings: 0
+ncvlog: *F,NOTOPL: no top-level unit found, must have recursive instances.
+irun: *E,VLGERR: An error occurred during parsing.  Review the log file for errors with the code *E and fix those identified problems to proceed.  Exiting with code (status 2).
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 24, 2019 at 00:31:39 IST  (total: 00:00:01)

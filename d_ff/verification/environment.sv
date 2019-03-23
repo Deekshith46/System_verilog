@@ -1,8 +1,3 @@
-`include "Transaction.sv"
-`include "generator.sv"
-`include "driver.sv"
-`include "monitor.sv"
-`include "scoboard.sv"
 
 class environment;
     generator gen;
@@ -19,14 +14,14 @@ class environment;
     virtual dff dif;
 
     function new(virtual dff dif);
-        this.vif = vif;
+        this.dif = dif;
         gdmbx = new();
         msmbx = new();
-        mbref = new();
-
+        
         gen = new( gdmbx , mbref);
         drv = new(dif ,gdmbx);
         mon = new(dif,msmbx);
+        mbref = new();
         sco = new(msmbx , mbref);
 
         gen.sconext = next;

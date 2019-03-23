@@ -10,10 +10,10 @@ class driver;
     trans = new();
     endfunction
 
-    task resest();
+    task reset();
         dif.rst <= 1'b1;
         repeat(5) @(posedge dif.clk);
-        dif.rsr <= 1'b0;
+        dif.rst <= 1'b0;
         @(posedge dif.clk);
         $display("[DRV] RESET DONE");
     endtask
@@ -23,7 +23,7 @@ class driver;
             mbx.get(trans);
                 dif.din <= trans.din;
             @(posedge dif.clk);
-                tr.display("DRV");
+                trans.display("DRV");
             dif.din <= 1'b0;
             @(posedge dif.clk);            
         end

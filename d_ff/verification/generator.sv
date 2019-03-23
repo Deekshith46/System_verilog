@@ -7,15 +7,15 @@ class generator;
     event done;
 
     function new(mailbox #(transaction) mbx, mailbox #(transaction) mbxref);
-        mbx = this.mbx;
-        mbxref = this.mbxref;
+         this.mbx = mbx;
+         this.mbxref = mbxref;
         trans = new();
     endfunction
 
     task run();
         repeat(30)
             begin
-                assert(trans.randomize)
+                assert(trans.randomize())
                     else $error("[GEN]:RANDOMIZATION FAILED");
                 mbx.put(trans.copy);
                 mbxref.put(trans.copy);

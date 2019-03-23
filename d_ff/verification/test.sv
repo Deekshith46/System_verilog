@@ -1,7 +1,7 @@
-`include "environment.sv"
+
     
 module tb;
-    dif dif();
+    dff dif();
 
     d_ff dut(dif.clk,dif.rst,dif.din,dif.dout);
 
@@ -9,7 +9,7 @@ module tb;
         dif.clk <= 0;
     end
 
-    always #10 fif.clk <= ~fif.clock;
+    always #10 dif.clk <= ~dif.clock;
 
     environment env;
 

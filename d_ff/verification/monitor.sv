@@ -13,7 +13,7 @@ transaction trans;
     task run();
         forever begin
         repeat(2) @(posedge dif.clk);
-        trans.dout = vif.dout;
+        trans.dout = dif.dout;
         mbx.put(trans);
         trans.display("MON");
         end                    

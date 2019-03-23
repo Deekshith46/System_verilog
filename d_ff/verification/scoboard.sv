@@ -1,5 +1,5 @@
 class scoboard;
-    transaction trans transref;
+    transaction trans, transref;
     mailbox #(transaction) mbx;
     mailbox #(transaction) mbxref;
     event sconext;
@@ -18,9 +18,10 @@ class scoboard;
             transref.display("REF");
                 if(trans.dout == transref.din)
                     $display("[SCO]: DATA MATCHED");
-                esle
+                else begin
                     $display("[SCO]: DATA MISS MATCHED");
                     $display("------------------------------------");
+                    end
                     -> sconext;
         end
     endtask

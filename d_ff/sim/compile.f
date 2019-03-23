@@ -1,2 +1,9 @@
 ../rtl/d_ff.v
+../verification/Transaction.sv
+../verification/generator.sv
+../verification/interface.sv
+../verification/driver.sv
+../verification/monitor.sv
+../verification/scoboard.sv
+../verification/environment.sv
 ../verification/test.sv

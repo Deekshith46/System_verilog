@@ -18,10 +18,10 @@ class scoboard;
             transref.display("REF");
                 if(trans.dout == transref.din)
                     $display("[SCO]: DATA MATCHED");
-                else begin
+                else 
                     $display("[SCO]: DATA MISS MATCHED");
                     $display("------------------------------------");
-                    end
+                 
                     -> sconext;
         end
     endtask

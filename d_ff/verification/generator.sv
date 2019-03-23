@@ -1,7 +1,7 @@
 class generator;
     transaction trans;
-    mailbox mbx;
-    mailbox mbxref;
+    mailbox #(transaction) mbx;
+    mailbox #(transaction) mbxref;
     
     event sconext;
     event done;
@@ -15,7 +15,7 @@ class generator;
     task run();
         repeat(30)
             begin
-                assert(trans.randomize())
+                assert(trans.randomize)
                     else $error("[GEN]:RANDOMIZATION FAILED");
                 mbx.put(trans.copy);
                 mbxref.put(trans.copy);

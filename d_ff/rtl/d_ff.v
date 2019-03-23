@@ -6,12 +6,11 @@ module d_ff(din,clk,rst,dout);
         
         always@(posedge clk)
                 begin
-                     if(rst)begin
+                     if(rst)
                             dout <= 1'b0;
-                        end
-                     else begin
-                        dout <=din;
-                        end
+                        
+                     else 
+                        dout <= din;                       
                 end
 endmodule
 

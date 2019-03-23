@@ -9,7 +9,7 @@ module tb;
         dif.clk <= 0;
     end
 
-    always #10 dif.clk <= ~dif.clock;
+    always #10 dif.clk <= ~dif.clk;
 
     environment env;
 

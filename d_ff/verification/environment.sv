@@ -14,16 +14,16 @@ class environment;
     virtual dff dif;
 
     function new(virtual dff dif);
-        this.dif = dif;
         gdmbx = new();
-        msmbx = new();
+        mbref = new();
         
         gen = new( gdmbx , mbref);
         drv = new(dif ,gdmbx);
+        msmbx = new();
         mon = new(dif,msmbx);
-        mbref = new();
         sco = new(msmbx , mbref);
-
+        
+        this.dif = dif;
         gen.sconext = next;
         sco.sconext = next;
 

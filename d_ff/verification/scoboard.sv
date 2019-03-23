@@ -7,7 +7,7 @@ class scoboard;
     function new( mailbox #(transaction) mbx , mailbox #(transaction) mbxref);
     this.mbx = mbx;
     this.mbxref = mbxref;
-    trans = new();
+    //trans = new();
     endfunction
 
     task run();
@@ -16,13 +16,15 @@ class scoboard;
             mbxref.get(transref);
             trans.display("SCO");
             transref.display("REF");
+
                 if(trans.dout == transref.din)
                     $display("[SCO]: DATA MATCHED");
                 else 
                     $display("[SCO]: DATA MISS MATCHED");
                     $display("------------------------------------");
                  
-                    -> sconext;
+                   -> sconext;
         end
+        
     endtask
 endclass

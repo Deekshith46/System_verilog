@@ -1,4 +1,3 @@
-s1(24Mar2019:02:56:37):  irun -access +rwc -f compile.f 
-s2(24Mar2019:02:58:19):  irun -access +rwc -f compile.f 
-s3(24Mar2019:02:59:03):  irun -access +rwc -f compile.f 
-s4(24Mar2019:03:03:37):  irun -access +rwc -f compile.f 
+s1(24Mar2019:03:50:00):  irun -access +rwc -f compile.f 
+s2(24Mar2019:03:59:18):  irun -access +rwc -f compile.f 
+s3(24Mar2019:03:59:34):  irun -access +rwc -f compile.f 

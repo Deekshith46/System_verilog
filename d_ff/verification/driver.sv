@@ -7,7 +7,7 @@ class driver;
     function new( virtual dff dif , mailbox #(transaction) mbx);
     this.dif = dif;
     this.mbx = mbx;
-    trans = new();
+   // trans = new();
     endfunction
 
     task reset();

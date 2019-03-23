@@ -1,9 +1,8 @@
-
     
 module tb;
     dff dif();
 
-    d_ff dut(dif.clk,dif.rst,dif.din,dif.dout);
+    d_ff dut(.clk(dif.clk),.rst(dif.rst),.din(dif.din),.dout(dif.dout));
 
     initial begin
         dif.clk <= 0;
@@ -17,5 +16,5 @@ module tb;
         env = new(dif);
         env.run();
     end
-    
+
 endmodule

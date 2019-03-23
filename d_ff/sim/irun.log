@@ -1,5 +1,5 @@
 irun(64): 15.20-s051: (c) Copyright 1995-2018 Cadence Design Systems, Inc.
-TOOL:	irun(64)	15.20-s051: Started on Mar 24, 2019 at 03:03:37 IST
+TOOL:	irun(64)	15.20-s051: Started on Mar 24, 2019 at 03:59:34 IST
 irun
 	-access +rwc
 	-f compile.f
@@ -36,9 +36,15 @@ irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-Recompiling... reason: file '../rtl/d_ff.v' is newer than expected.
-	expected: Sun Mar 24 02:58:53 2019
-	actual:   Sun Mar 24 03:03:33 2019
+DEFINE gpdk045		$ANALOG/45nm/gpdk045		
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
+DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
+|
+irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
+Recompiling... reason: file '../verification/driver.sv' is newer than expected.
+	expected: Sun Mar 24 01:00:04 2019
+	actual:   Sun Mar 24 03:54:19 2019
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
 |
 irun: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied '/tools/cadence/FOUNDRY/analog/45nm/gpdk045' (cds.lib command ignored).
@@ -51,10 +57,9 @@ ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission denied
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncvlog: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-file: ../rtl/d_ff.v
-	module worklib.d_ff:v
+file: ../verification/test.sv
+	module worklib.tb:sv
 		errors: 0, warnings: 0
-file: ../verification/scoboard.sv
 	Total errors/warnings found outside modules and primitives:
 		errors: 0, warnings: 2
 DEFINE gpdk045		$ANALOG/45nm/gpdk045		
@@ -89,8 +94,22 @@ ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,15): cds.lib Permission den
 DEFINE rfLib_new	/home/install/FOUNDRY/rfLib_new
 |
 ncvlog_cg: *W,DLCPTH (/tools/cadence/FOUNDRY/cds.lib,19): cds.lib Invalid path '/home/install/FOUNDRY/rfLib_new' (cds.lib command ignored).
-		worklib.d_ff:v <0x34981c02>
-			streams:   2, words:   404
+		worklib.\$unit_0x326d163c :compilation_unit <0x0b42377d>
+			streams:   8, words:  8144
+		worklib.\$unit_0x326d163c :compilation_unit <0x1f91d435>
+			streams:   0, words:     0
+		worklib.\$unit_0x326d163c :compilation_unit <0x2ab2aa6e>
+			streams:  13, words: 17211
+		worklib.\$unit_0x326d163c :compilation_unit <0x50f00e01>
+			streams:   8, words: 12044
+		worklib.\$unit_0x326d163c :compilation_unit <0x58343fe5>
+			streams:  16, words: 18901
+		worklib.\$unit_0x326d163c :compilation_unit <0x5b57ec80>
+			streams:   8, words: 10053
+		worklib.\$unit_0x326d163c :compilation_unit <0x6dee0947>
+			streams:   9, words:  5059
+		worklib.tb:sv <0x32ed6475>
+			streams:   9, words:  2799
 	Building instance specific data structures.
 	Loading native compiled code:     .................... Done
 	Design hierarchy summary:
@@ -123,108 +142,17 @@ ncsim> run
 [DRV] RESET DONE
 [GEN]: DIN : 1 DOUT : 0
 [DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
 [REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
-[SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
-[SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
-[SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
-[SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
-[SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
 [SCO]: DATA MATCHED
 ------------------------------------
 [GEN]: DIN : 1 DOUT : 0
 [DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
 [REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
 [SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
-[SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
 ------------------------------------
 [GEN]: DIN : 0 DOUT : 0
 [DRV]: DIN : 0 DOUT : 0
@@ -240,19 +168,12 @@ ncsim> run
 [REF]: DIN : 0 DOUT : 0
 [SCO]: DATA MATCHED
 ------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
 [MON]: DIN : 0 DOUT : 0
 [SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
 ------------------------------------
 [GEN]: DIN : 0 DOUT : 0
 [DRV]: DIN : 0 DOUT : 0
@@ -277,30 +198,9 @@ ncsim> run
 ------------------------------------
 [GEN]: DIN : 1 DOUT : 0
 [DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
 [REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
-[SCO]: DATA MATCHED
-------------------------------------
-[GEN]: DIN : 1 DOUT : 0
-[DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
-------------------------------------
-[GEN]: DIN : 0 DOUT : 0
-[DRV]: DIN : 0 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 0 DOUT : 0
 [SCO]: DATA MATCHED
 ------------------------------------
 [GEN]: DIN : 0 DOUT : 0
@@ -312,26 +212,145 @@ ncsim> run
 ------------------------------------
 [GEN]: DIN : 1 DOUT : 0
 [DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
 [MON]: DIN : 0 DOUT : 0
 [SCO]: DIN : 0 DOUT : 0
-[REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
 ------------------------------------
 [GEN]: DIN : 1 DOUT : 0
 [DRV]: DIN : 1 DOUT : 0
-[MON]: DIN : 0 DOUT : 0
-[SCO]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
 [REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
+[SCO]: DATA MATCHED
 ------------------------------------
 [GEN]: DIN : 1 DOUT : 0
 [DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
 [MON]: DIN : 0 DOUT : 0
 [SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 0
+[SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
 [REF]: DIN : 1 DOUT : 0
-[SCO]: DATA MISS MATCHED
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 0
+[SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 0
+[SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 0
+[SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 0
+[SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 0
+[SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 0 DOUT : 0
+[DRV]: DIN : 0 DOUT : 0
+[MON]: DIN : 0 DOUT : 0
+[SCO]: DIN : 0 DOUT : 0
+[REF]: DIN : 0 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
+------------------------------------
+[GEN]: DIN : 1 DOUT : 0
+[DRV]: DIN : 1 DOUT : 0
+[MON]: DIN : 0 DOUT : 1
+[SCO]: DIN : 0 DOUT : 1
+[REF]: DIN : 1 DOUT : 0
+[SCO]: DATA MATCHED
 ------------------------------------
 Simulation complete via $finish(1) at time 1310 NS + 1
 ../verification/environment.sv:47         $finish();        
 ncsim> exit
-TOOL:	irun(64)	15.20-s051: Exiting on Mar 24, 2019 at 03:03:37 IST  (total: 00:00:00)
+TOOL:	irun(64)	15.20-s051: Exiting on Mar 24, 2019 at 03:59:34 IST  (total: 00:00:00)

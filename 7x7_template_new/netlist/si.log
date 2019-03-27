@@ -1,0 +1,36 @@
+2019/03/18 19:21:08 WARNING This OS does not appear to be a Cadence supported Linux configuration.
+2019/03/18 19:21:08 For more info, please run CheckSysConf in <cdsRoot/tools.lnx86/bin/checkSysConf <productId>
+Virtuoso Framework License (111) was checked out successfully. Total checkout time was 0.01s.
+*INFO* (icLic-302) License Virtuoso_Schematic_Editor_XL ("Schematics XL") was used to run Schematics L.
+*WARNING* The directory: '/home/install/FOUNDRY/rfLib_new' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'rfLib_new'.
+*WARNING* The directory: '/home/install/FOUNDRY/rfLib_new' does not exist
+	but was defined in libFile '/tools/cadence/FOUNDRY/cds.lib' for Lib 'rfLib_new'.
+Loading gpdk090/libInit.il ...
+	Loading gpdk090/loadCxt.ile ... done!
+	Loading context 'gpdk090' from library 'gpdk090' ... done!
+	Loading context 'pdkUtils' from library 'gpdk090' ... done!
+	Loading gpdk090/gpdk090_customFilter.il ... done!
+	Loading gpdk090/.simrc ... done!
+	Loading gpdk090/libInitCustomExit.il ... 	Loading Environment Settings ...
+	Loading gpdk090/gpdk090_PDKRegistrations.il ... done!
+
+  *************************************************************           
+  *              Cadence Design Systems, Inc.                 *           
+  *                                                           *           
+  *                    Generic 90nm PDK                       *           
+  *                        (gpdk090)                          *           
+  *                                                           *           
+  *************************************************************           
+	
+
+	Version : 4.6
+
+	Build date: 10-FEB-2011
+
+done!
+Loaded gpdk090/libInit.il successfully!
+*WARNING* envSetVal: Can't set the value of variable 'extractVerifySubstrate',
+	in tool[.partition] 'layout' - it has not been registered.
+Running Artist Hierarchical Netlisting ...
+End netlisting Mar 18 19:21:09 2019

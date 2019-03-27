@@ -1,0 +1,59 @@
+*SPEF "IEEE 1481-1999"
+*DESIGN  "INV90"
+*DATE "Sun Mar 17 04:36:09 2019"
+*VENDOR "Cadence Design Systems"
+*PROGRAM "Cadence Quantus QRC Extraction"
+*VERSION "18.1.2-s132 Linux 64 bit - (Thu May 10 00:43:37 PDT 2018)"
+*DESIGN_FLOW "Physical Verification"
+*DIVIDER /
+*DELIMITER :
+*BUS_DELIMITER []
+*T_UNIT 1 PS
+*C_UNIT 1e15 FF
+*R_UNIT 1 OHM
+*L_UNIT 1 MH
+// DeviceFingerDelim "@"
+// MATCHED
+// caps2d version: 10
+
+*NAME_MAP
+*1 VSS
+*2 VDD
+*3 Y
+*4 A
+
+*GROUND_NETS VSS
+
+*PORTS
+*2 I
+*1 I
+*4 I
+*3 O
+
+*D_NET *2 4.16589e-16
+
+
+*CAP
+*2 *2 4.16589e-16
+
+
+*END
+
+*D_NET *4 6.012e-16
+
+
+*CAP
+*4 *4 6.012e-16
+
+
+*END
+
+*D_NET *3 6.37705e-16
+
+
+*CAP
+*3 *3 6.37705e-16
+
+
+*END
+

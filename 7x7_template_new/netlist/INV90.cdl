@@ -1,0 +1,42 @@
+
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name: STANDARD_CELLS
+* Top Cell Name:INV90
+* View Name:     schematic
+* Netlisted on:  Mar 18 19:21:09 2019
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VDD
+*+       VSS
+
+*.PIN VDD
+*+    VSS
+
+
+************************************************************************
+* Library Name: STANDARD_CELLS
+* Cell Name:    INV90
+* View Name:    schematic
+************************************************************************
+simulator lang=spice
+
+.SUBCKT INV90 A VDD VSS Y
+*.PININFO A:I Y:O VDD:B VSS:B
+MPM0 Y A VDD VDD pmos1v m=1 l=180n w=2u
+MNM0 Y A VSS VSS nmos1v m=1 l=180n w=2u
+.ENDS
+
+

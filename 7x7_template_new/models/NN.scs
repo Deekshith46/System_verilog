@@ -1,0 +1,5 @@
+*** Model include file ***
+simulator lang = spectre
+include "/tools/cadence/FOUNDRY/analog/90nm/models/spectre/gpdk090.scs" section=NN
+simulator lang = spice
+

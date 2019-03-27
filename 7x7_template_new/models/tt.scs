@@ -1,0 +1,3 @@
+* spice model file
+simulator lang = spectre
+include "/home/vv2trainee33/standard_cell_characterization/7x7_template/models/gpdk045.scs" section=tt

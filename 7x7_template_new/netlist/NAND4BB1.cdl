@@ -1,0 +1,51 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  STANDARD_CELLS
+* Top Cell Name: NAND4BB1
+* View Name:     schematic
+* Netlisted on:  Mar 16 20:14:52 2019
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VDD 
++        VSS
+
+*.PIN VDD
+*+    VSS
+
+
+************************************************************************
+* Library Name: STANDARD_CELLS
+* Cell Name:    NAND4BB1
+* View Name:    schematic
+************************************************************************
+
+simulator lang=spice
+
+.SUBCKT NAND4BB1 A B C D VDD VSS Y
+*.PININFO A:I B:I C:I D:I Y:O VDD:B VSS:B
+MPM5 net026 D VDD VDD g45p1svt m=1 l=50n w=445n
+MPM4 net022 A VDD VDD g45p1svt m=1 l=50n w=445n
+MPM3 Y net026 VDD VDD g45p1svt m=1 l=50n w=445n
+MPM2 Y C VDD VDD g45p1svt m=1 l=50n w=445n
+MPM1 Y B VDD VDD g45p1svt m=1 l=50n w=445n
+MPM0 Y net022 VDD VDD g45p1svt m=1 l=50n w=445n
+MNM5 net026 D VSS VSS g45n1svt m=1 l=50n w=385n
+MNM4 net022 A VSS VSS g45n1svt m=1 l=50n w=385n
+MNM3 net21 net022 VSS VSS g45n1svt m=1 l=50n w=385n
+MNM2 net22 C net21 VSS g45n1svt m=1 l=50n w=385n
+MNM1 net23 B net22 VSS g45n1svt m=1 l=50n w=385n
+MNM0 Y net026 net23 VSS g45n1svt m=1 l=50n w=385n
+.ENDS
+

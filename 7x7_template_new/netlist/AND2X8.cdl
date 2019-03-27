@@ -1,0 +1,44 @@
+************************************************************************
+* auCdl Netlist:
+* 
+* Library Name:  STANDARD_CELLS
+* Top Cell Name: AND2X8
+* View Name:     schematic
+* Netlisted on:  Mar 16 21:00:25 2019
+************************************************************************
+
+*.BIPOLAR
+*.RESI = 2000 
+*.RESVAL
+*.CAPVAL
+*.DIOPERI
+*.DIOAREA
+*.EQUATION
+*.SCALE METER
+*.MEGA
+.PARAM
+
+*.GLOBAL VDD
++        VSS
+
+*.PIN VDD
+*+    VSS 
+
+************************************************************************
+* Library Name: STANDARD_CELLS
+* Cell Name:    AND2X8
+* View Name:    schematic
+************************************************************************
+simulator lang=spice
+
+
+.SUBCKT AND2X8 A B VDD VSS Y
+*.PININFO A:I B:I Y:O VDD:B VSS:B
+MPM2 Y net10 VDD VDD g45p1svt m=1 l=50n w=3.56u
+MPM1 net10 B VDD VDD g45p1svt m=1 l=50n w=890n
+MPM0 net10 A VDD VDD g45p1svt m=1 l=50n w=890n
+MNM2 Y net10 VSS VSS g45n1svt m=1 l=50n w=3.08u
+MNM1 net23 B VSS VSS g45n1svt m=1 l=50n w=770n
+MNM0 net10 A net23 VSS g45n1svt m=1 l=50n w=770n
+.ENDS
+

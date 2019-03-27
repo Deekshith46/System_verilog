@@ -1,0 +1,167 @@
+ROOT_DIR = /tools/cadence/LIBERATE171
+exepath = /tools/cadence/LIBERATE171/tools/bin
+Host : compute-srv2.eda.atme.in x86_64 Linux 3.10.0-1160.49.1.el7.x86_64
+LIBERATE Library Characterization Platform (x86_64) 
+Release dev, compiled by vficcm on Mon May 14 06:50:11 PDT 2018
+
+
+    ********************************************************************
+    *   Copyright (c)  Cadence Design Systems, Inc.  2006 - 2019.      *
+    *             All rights reserved.                                 *
+    *                                                                  *
+    *                                                                  *
+    *                                                                  *
+    * This program contains confidential and trade secret information  *
+    * of Cadence Design Systems, Inc. and is protected by copyright    *
+    * law and international treaties.  Any reproduction, use,          *
+    * distribution or disclosure of this program or any portion of it, *
+    * or any attempt to obtain a human-readable version of this        *
+    * program, without the express, prior written consent of           *
+    * Cadence Design Systems, Inc., is strictly prohibited.            *
+    *                                                                  *
+    *         Cadence Design Systems, Inc.                             *
+    *           2655 Seely Avenue                                      *
+    *           San Jose, CA 95134,  USA                               *
+    *                                                                  *
+    *                                                                  *
+    ********************************************************************
+    
+    
+    Copyright notices for Open Source and Third Party Tools used by this 
+    software can be viewed at <cds_inst_dir>/doc/liberate/thirdpartyinfo/Notices.txt
+
+LIBERATE started on compute-srv2.eda.atme.in at Wed Mar 27 22:54:01 2019
+
+Command line arguments: './char_for_allcells.tcl TT_25_1.1'.
+ALTOSHOME set to '/tools/cadence/LIBERATE171'.
+INFO (LIB-700): (Mar 27 22:54:01): ERROR (LMF-11005): License call failed for feature Liberate_LX_Server, version 17.100 and quantity 1. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-5, 234, 0): No such feature exists.
+
+Run 'lic_error LMF-11005' for more information.
+INFO (LIB-700): (Mar 27 22:54:01): ERROR (LMF-11005): License call failed for feature Variety_LX_Server, version 17.100 and quantity 1. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-5, 234, 0): No such feature exists.
+
+Run 'lic_error LMF-11005' for more information.
+Server ID : T20190327225401177393S0002236
+TESTING PURPOSE: cell_list is INV90 {}
+LIBERATE parameter "force_condition" set to "4"
+LIBERATE parameter "sdf_cond_style" set to "1"
+LIBERATE parameter "sdf_cond_equals" set to "=="
+LIBERATE parameter "ldb_precision" set to "8"
+LIBERATE parameter "extsim_cmd_option" set to "+spice"
+LIBERATE parameter "extsim_deck_header" set to "simulator lang=spectre
+SetOption1 options 
+simulator lang=spice"
+LIBERATE parameter "extsim_option" set to "method=gear gmin=1e-15 gmindefault=gmindc redefinedparams=ignore save=nooutput"
+LIBERATE parameter "extsim_leakage_option" set to "method=gear gmin=1e-15 gmindefault=gmindc redefinedparams=ignore save=nooutput"
+LIBERATE parameter "extsim_cmd" set to "/tools/cadence/SPECTRE171/tools/bin/spectre"
+WARNING (LIB-42): (set_var): Ignoring undefined variable 'extsim_leakage'.
+LIBERATE parameter "measure_cap_lower_rise" set to "0.01"
+LIBERATE parameter "measure_cap_upper_rise" set to "0.99"
+LIBERATE parameter "measure_cap_lower_fall" set to "0.01"
+LIBERATE parameter "measure_cap_upper_fall" set to "0.99"
+LIBERATE parameter "mpw_input_threshold" set to "0.9"
+LIBERATE parameter "conditional_arc" set to "1"
+LIBERATE parameter "combinational_risefall" set to "1"
+LIBERATE parameter "default_unateness" set to "separate"
+LIBERATE parameter "extsim_deck_dir" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks"
+LIBERATE parameter "extsim_exclusive" set to "1"
+LIBERATE parameter "sim_estimate_duration" set to "0"
+LIBERATE parameter "conditional_expression" set to "separate"
+LIBERATE parameter "conditional_constraint" set to "1"
+LIBERATE parameter "constraint_delay_degrade_abstol" set to "1e-12"
+LIBERATE parameter "constraint_search_time_abstol" set to "2e-12"
+LIBERATE parameter "constraint_snap_to_bound" set to "1"
+LIBERATE parameter "constraint_delay_degrade" set to "0.1"
+LIBERATE parameter "reset_negative_constraint" set to "0"
+LIBERATE parameter "constraint_delay_degrade_abstol_max" set to "6e-11"
+LIBERATE parameter "constraint_glitch_hold" set to "0"
+LIBERATE parameter "constraint_glitch_peak" set to "0.2"
+LIBERATE parameter "constraint_glitch_peak_internal" set to "0.2"
+LIBERATE parameter "constraint_glitch_peak_mode" set to "0"
+LIBERATE parameter "constraint_output_load" set to "min"
+LIBERATE parameter "constraint_slew_degrade" set to "-1"
+LIBERATE parameter "mpw_criteria" set to "delay"
+LIBERATE parameter "mpw_table" set to "1"
+LIBERATE parameter "constraint_check_final_state" set to "3"
+LIBERATE parameter "mpw_delay_use_active_edge" set to "1"
+LIBERATE parameter "toggle_leakage_state" set to "1"
+LIBERATE parameter "power_subtract_output_load" set to "all"
+LIBERATE parameter "power_combinational_include_output" set to "0"
+LIBERATE parameter "power_sequential_include_complementary_output" set to "0"
+LIBERATE parameter "hidden_power" set to "1"
+LIBERATE parameter "leakage_add_input_pin" set to "1"
+LIBERATE parameter "leakage_mode" set to "1"
+LIBERATE parameter "force_default_group" set to "0"
+LIBERATE parameter "max_transition_for_outputs" set to "max"
+LIBERATE parameter "conditional_include_output" set to "0"
+LIBERATE parameter "time_unit" set to "1ns"
+LIBERATE parameter "capacitance_unit" set to "1pf"
+LIBERATE parameter "leakage_power_unit" set to "1uW"
+LIBERATE parameter "current_unit" set to "1mA"
+LIBERATE parameter "pulling_resistance_unit" set to "1kohm"
+LIBERATE parameter "capacitance_force_hidden" set to "1"
+LIBERATE parameter "voltage_map" set to "1"
+LIBERATE parameter "pin_based_power" set to "2"
+LIBERATE parameter "power_multi_output_binning_mode" set to "1"
+LIBERATE parameter "power_subtract_leakage" set to "1"
+LIBERATE parameter "subtract_hidden_power" set to "2"
+LIBERATE parameter "parse_ignore_duplicate_subckt" set to "1"
+WARNING (LIB-42): (set_var): Ignoring undefined variable 'user_data_apply_after_ldb_processing'.
+LIBERATE parameter "tmpdir" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/temp"
+LIBERATE parameter "slew_lower_rise" set to "0.1"
+LIBERATE parameter "slew_lower_fall" set to "0.1"
+LIBERATE parameter "slew_upper_rise" set to "0.9"
+LIBERATE parameter "slew_upper_fall" set to "0.9"
+LIBERATE parameter "measure_slew_lower_rise" set to "0.3"
+LIBERATE parameter "measure_slew_lower_fall" set to "0.3"
+LIBERATE parameter "measure_slew_upper_rise" set to "0.7"
+LIBERATE parameter "measure_slew_upper_fall" set to "0.7"
+LIBERATE parameter "delay_inp_rise" set to "0.5"
+LIBERATE parameter "delay_inp_fall" set to "0.5"
+LIBERATE parameter "delay_out_rise" set to "0.5"
+LIBERATE parameter "delay_out_fall" set to "0.5"
+LIBERATE parameter "def_arc_msg_level" set to "0"
+LIBERATE parameter "process_match_pins_to_ports" set to "1"
+LIBERATE parameter "max_transition" set to "4.8e-10"
+LIBERATE parameter "min_transition" set to "4e-13"
+LIBERATE parameter "min_output_cap" set to "1e-16"
+LIBERATE parameter "keep_dcap_leakage" set to "1"
+LIBERATE parameter "ldb_checkpoint_dir" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/checkpointdir/TT_25_1.1"
+LIBERATE parameter "extsim_model_include" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/models/tt.scs"
+LIBERATE parameter "default_unateness" overwritten to "merge" from "separate"
+INFO (LIB-26): The variable 'default_group_method' is no longer supported. Replace it with the 'set_default_group' command in the Tcl script and rerun.
+LIBERATE parameter "default_group_method" set to "0"
+LIBERATE parameter "default_const_method" set to "0"
+LIBERATE parameter "default_timing" set to "max"
+LIBERATE parameter "default_power" set to "min"
+INFO (LIB-26): The variable 'default_leakage' is no longer supported. Replace it with the 'set_default_group' command in the Tcl script and rerun.
+LIBERATE parameter "default_leakage" set to "avg"
+INFO (LIB-26): The variable 'default_capacitance' is no longer supported. Replace it with the 'set_default_group' command in the Tcl script and rerun.
+LIBERATE parameter "default_capacitance" set to "max"
+LIBERATE parameter "extsim_flatten_netlist" set to "0"
+LIBERATE parameter "parse_auto_define_leafcell" set to "0"
+INFO (LIB-511): (define_leafcell): Leafcell 'gpdk090_pmos1v' (instance) has been identified with pin_position (0 1 2 3) mapped to (D G S B).
+INFO (LIB-511): (define_leafcell): Leafcell 'gpdk090_nmos1v' (instance) has been identified with pin_position (0 1 2 3) mapped to (D G S B).
+LIBERATE parameter "extsim_deck_dir" overwritten to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks/TT_25_1.1/" from "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks"
+LIBERATE parameter "extsim_deck_dir" overwritten to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks" from "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks/TT_25_1.1/"
+LIBERATE parameter "extsim_save_failed" set to "all"
+LIBERATE parameter "extsim_save_passed" set to "all"
+LIBERATE parameter "extsim_save_verify" set to "2"
+*Warning* (set_gnd) : Gnd supply VSS has already been set, overriding previous value to 0
+*Warning* (set_vdd) : Vdd supply VDD has already been set, overriding previous value to 1.1
+LIBERATE parameter "packet_clients" set to "0"
+LIBERATE parameter "packet_mode" set to "arc"
+LIBERATE parameter "simulator" set to "spectre"
+LIBERATE parameter "char_library_skip_var_list" set to ""
+Start Characterizing Library at (Wed Mar 27 22:54:04 IST 2019)
+
+Error found by parser during circuit read-in.
+"/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/netlist/INV90.cdl", line 1: Error: 0: Unexpected string value "/************************************************************************". Cannot run the simulation because of syntax error. Correct the error and rerun the simulation.
+ERROR (LIB-904): The SKI-SFE parser failed to initialize. Check that you are using a supported version of Linux and rerun.
+Peak memory usage:          345 MB
+Peak virtual memory usage:  288 MB
+Peak physical memory usage: 57 MB
+Wall time      :    0.00 hours (4.00 seconds)
+LIBERATE exited on compute-srv2.eda.atme.in at Wed Mar 27 22:54:05 2019
+

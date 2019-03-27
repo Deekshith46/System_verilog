@@ -1,0 +1,380 @@
+library (TT_25_1.1) {
+  /* Models written by Liberate dev from Cadence Design Systems, Inc. on Sat Mar 16 21:13:26 IST 2019 */
+  comment : "";
+  date : "$Date: Sat Mar 16 21:13:07 2019 $";
+  revision : "1.0";
+  delay_model : table_lookup;
+  capacitive_load_unit (1,pf);
+  current_unit : "1mA";
+  leakage_power_unit : "1uW";
+  pulling_resistance_unit : "1kohm";
+  time_unit : "1ns";
+  voltage_unit : "1V";
+  voltage_map (VDD, 1.1);
+  voltage_map (VSS, 0);
+  voltage_map (VNW, 1.1);
+  voltage_map (VPW, 0);
+  voltage_map (GND, 0);
+  default_cell_leakage_power : 0;
+  default_fanout_load : 1;
+  default_max_transition : 0.48;
+  default_output_pin_cap : 0;
+  in_place_swap_mode : match_footprint;
+  input_threshold_pct_fall : 50;
+  input_threshold_pct_rise : 50;
+  nom_process : 1;
+  nom_temperature : 25;
+  nom_voltage : 1.1;
+  output_threshold_pct_fall : 50;
+  output_threshold_pct_rise : 50;
+  slew_derate_from_library : 0.5;
+  slew_lower_threshold_pct_fall : 30;
+  slew_lower_threshold_pct_rise : 30;
+  slew_upper_threshold_pct_fall : 70;
+  slew_upper_threshold_pct_rise : 70;
+  operating_conditions (PVT_1P1V_25C) {
+    process : 1;
+    temperature : 25;
+    voltage : 1.1;
+  }
+  default_operating_conditions : PVT_1P1V_25C;
+  lu_table_template (constraint_template_2x2) {
+    variable_1 : constrained_pin_transition;
+    variable_2 : related_pin_transition;
+    index_1 ("0.008, 0.28");
+    index_2 ("0.008, 0.28");
+  }
+  lu_table_template (delay_template_2x2) {
+    variable_1 : input_net_transition;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.008, 0.28");
+    index_2 ("0.01, 0.3");
+  }
+  lu_table_template (mpw_constraint_template_2x2) {
+    variable_1 : constrained_pin_transition;
+    index_1 ("0.008, 0.28");
+  }
+  power_lut_template (passive_power_template_2x1) {
+    variable_1 : input_transition_time;
+    index_1 ("0.008, 0.28");
+  }
+  power_lut_template (power_template_2x2) {
+    variable_1 : input_transition_time;
+    variable_2 : total_output_net_capacitance;
+    index_1 ("0.008, 0.28");
+    index_2 ("0.01, 0.3");
+  }
+  cell (AND2X8) {
+    area : 0;
+    cell_leakage_power : 0.000410441;
+    pg_pin (VDD) {
+      pg_type : primary_power;
+      voltage_name : "VDD";
+    }
+    pg_pin (VSS) {
+      pg_type : primary_ground;
+      voltage_name : "VSS";
+    }
+    leakage_power () {
+      value : 0.000475156;
+      when : "A * B";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "A * B";
+      related_pg_pin : VSS;
+    }
+    leakage_power () {
+      value : 0.000356713;
+      when : "A * !B";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "A * !B";
+      related_pg_pin : VSS;
+    }
+    leakage_power () {
+      value : 0.000408717;
+      when : "!A * B";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "!A * B";
+      related_pg_pin : VSS;
+    }
+    leakage_power () {
+      value : 0.000401179;
+      when : "!A * !B";
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      when : "!A * !B";
+      related_pg_pin : VSS;
+    }
+    leakage_power () {
+      value : 0.000410441;
+      related_pg_pin : VDD;
+    }
+    leakage_power () {
+      value : 0;
+      related_pg_pin : VSS;
+    }
+    pin (Y) {
+      direction : output;
+      function : "A * B";
+      power_down_function : "(!VDD) + (VSS)";
+      related_ground_pin : VSS;
+      related_power_pin : VDD;
+      max_capacitance : 0.461493;
+      max_transition : 0.470871;
+      timing () {
+        related_pin : "A";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.0314024, 0.295458", \
+            "0.122953, 0.393877" \
+          );
+        }
+        rise_transition (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.0110131, 0.470784", \
+            "0.0248742, 0.470516" \
+          );
+        }
+        cell_fall (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.0250485, 0.198841", \
+            "0.131643, 0.314187" \
+          );
+        }
+        fall_transition (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00856342, 0.307851", \
+            "0.0225514, 0.308439" \
+          );
+        }
+      }
+      timing () {
+        related_pin : "B";
+        timing_sense : positive_unate;
+        timing_type : combinational;
+        cell_rise (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.0331726, 0.297357", \
+            "0.126091, 0.396596" \
+          );
+        }
+        rise_transition (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.0110027, 0.470784", \
+            "0.0206786, 0.470871" \
+          );
+        }
+        cell_fall (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.02749, 0.201756", \
+            "0.139519, 0.322358" \
+          );
+        }
+        fall_transition (delay_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00878746, 0.30799", \
+            "0.021401, 0.308515" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "A";
+        when : "B";
+        related_pg_pin : VDD;
+        rise_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00307073, 0.000668556", \
+            "0.00321225, 0.000131096" \
+          );
+        }
+        fall_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00393706, 0.00437521", \
+            "0.00402823, 0.00428828" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "A";
+        when : "B";
+        related_pg_pin : VSS;
+        rise_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00404425, 0.00450827", \
+            "0.00418409, 0.0044395" \
+          );
+        }
+        fall_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00296659, 0.00150932", \
+            "0.00305785, 0.000489916" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "B";
+        when : "A";
+        related_pg_pin : VDD;
+        rise_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00307659, 0.00128445", \
+            "0.00308397, 0.000980131" \
+          );
+        }
+        fall_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00437354, 0.00481521", \
+            "0.00447934, 0.0047243" \
+          );
+        }
+      }
+      internal_power () {
+        related_pin : "B";
+        when : "A";
+        related_pg_pin : VSS;
+        rise_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00431175, 0.00477414", \
+            "0.00431497, 0.00462423" \
+          );
+        }
+        fall_power (power_template_2x2) {
+          index_1 ("0.0004, 0.48");
+          index_2 ("0.0001, 0.461493");
+          values ( \
+            "0.00316269, 0.00221503", \
+            "0.00327372, 0.00169816" \
+          );
+        }
+      }
+    }
+    pin (A) {
+      direction : input;
+      related_ground_pin : VSS;
+      related_power_pin : VDD;
+      max_transition : 0.48;
+      capacitance : 0.000903355;
+      rise_capacitance : 0.000897941;
+      rise_capacitance_range (0.000573819, 0.00145592);
+      fall_capacitance : 0.000908769;
+      fall_capacitance_range (0.000571197, 0.00145423);
+      internal_power () {
+        when : "!B";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "-0.00041287, -0.000419373" \
+          );
+        }
+        fall_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "0.000480696, 0.000481853" \
+          );
+        }
+      }
+      internal_power () {
+        when : "!B";
+        related_pg_pin : VSS;
+        rise_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "0.000117885, 0.000112566" \
+          );
+        }
+        fall_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "-6.77641e-05, -6.41896e-05" \
+          );
+        }
+      }
+    }
+    pin (B) {
+      direction : input;
+      related_ground_pin : VSS;
+      related_power_pin : VDD;
+      max_transition : 0.48;
+      capacitance : 0.000989651;
+      rise_capacitance : 0.000979371;
+      rise_capacitance_range (0.000649615, 0.00143957);
+      fall_capacitance : 0.000999931;
+      fall_capacitance_range (0.000704539, 0.00140903);
+      internal_power () {
+        when : "!A";
+        related_pg_pin : VDD;
+        rise_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "-0.00037441, -0.0003803" \
+          );
+        }
+        fall_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "0.00049511, 0.000422494" \
+          );
+        }
+      }
+      internal_power () {
+        when : "!A";
+        related_pg_pin : VSS;
+        rise_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "0.000333209, 0.000327458" \
+          );
+        }
+        fall_power (passive_power_template_2x1) {
+          index_1 ("0.0004, 0.48");
+          values ( \
+            "-0.000215282, -0.000292395" \
+          );
+        }
+      }
+    }
+  }
+}

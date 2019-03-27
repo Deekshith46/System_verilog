@@ -1,0 +1,1 @@
+include "/tools/cadence/FOUNDRY/analog/45nm/models/spectre/gpdk045.scs" section=ff

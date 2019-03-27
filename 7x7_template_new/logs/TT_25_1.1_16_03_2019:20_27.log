@@ -1,0 +1,371 @@
+ROOT_DIR = /tools/cadence/LIBERATE171
+exepath = /tools/cadence/LIBERATE171/tools/bin
+Host : compute-srv2.eda.atme.in x86_64 Linux 3.10.0-1160.49.1.el7.x86_64
+LIBERATE Library Characterization Platform (x86_64) 
+Release dev, compiled by vficcm on Mon May 14 06:50:11 PDT 2018
+
+
+    ********************************************************************
+    *   Copyright (c)  Cadence Design Systems, Inc.  2006 - 2019.      *
+    *             All rights reserved.                                 *
+    *                                                                  *
+    *                                                                  *
+    *                                                                  *
+    * This program contains confidential and trade secret information  *
+    * of Cadence Design Systems, Inc. and is protected by copyright    *
+    * law and international treaties.  Any reproduction, use,          *
+    * distribution or disclosure of this program or any portion of it, *
+    * or any attempt to obtain a human-readable version of this        *
+    * program, without the express, prior written consent of           *
+    * Cadence Design Systems, Inc., is strictly prohibited.            *
+    *                                                                  *
+    *         Cadence Design Systems, Inc.                             *
+    *           2655 Seely Avenue                                      *
+    *           San Jose, CA 95134,  USA                               *
+    *                                                                  *
+    *                                                                  *
+    ********************************************************************
+    
+    
+    Copyright notices for Open Source and Third Party Tools used by this 
+    software can be viewed at <cds_inst_dir>/doc/liberate/thirdpartyinfo/Notices.txt
+
+LIBERATE started on compute-srv2.eda.atme.in at Sat Mar 16 20:27:30 2019
+
+Command line arguments: './char_for_allcells.tcl TT_25_1.1'.
+ALTOSHOME set to '/tools/cadence/LIBERATE171'.
+INFO (LIB-700): (Mar 16 20:27:30): ERROR (LMF-11005): License call failed for feature Liberate_LX_Server, version 17.100 and quantity 1. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-5, 234, 0): No such feature exists.
+
+Run 'lic_error LMF-11005' for more information.
+INFO (LIB-700): (Mar 16 20:27:30): ERROR (LMF-11005): License call failed for feature Variety_LX_Server, version 17.100 and quantity 1. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-5, 234, 0): No such feature exists.
+
+Run 'lic_error LMF-11005' for more information.
+Server ID : T20190316202730533012S0045701
+TESTING PURPOSE: cell_list is NAND4BB1
+LIBERATE parameter "force_condition" set to "4"
+LIBERATE parameter "sdf_cond_style" set to "1"
+LIBERATE parameter "sdf_cond_equals" set to "=="
+LIBERATE parameter "ldb_precision" set to "8"
+LIBERATE parameter "extsim_cmd_option" set to "+spice"
+LIBERATE parameter "extsim_deck_header" set to "simulator lang=spectre
+SetOption1 options 
+simulator lang=spice"
+LIBERATE parameter "extsim_option" set to "method=gear gmin=1e-15 gmindefault=gmindc redefinedparams=ignore save=nooutput"
+LIBERATE parameter "extsim_leakage_option" set to "method=gear gmin=1e-15 gmindefault=gmindc redefinedparams=ignore save=nooutput"
+LIBERATE parameter "extsim_cmd" set to "/tools/cadence/SPECTRE171/tools/bin/spectre"
+WARNING (LIB-42): (set_var): Ignoring undefined variable 'extsim_leakage'.
+LIBERATE parameter "measure_cap_lower_rise" set to "0.01"
+LIBERATE parameter "measure_cap_upper_rise" set to "0.99"
+LIBERATE parameter "measure_cap_lower_fall" set to "0.01"
+LIBERATE parameter "measure_cap_upper_fall" set to "0.99"
+LIBERATE parameter "mpw_input_threshold" set to "0.9"
+LIBERATE parameter "conditional_arc" set to "1"
+LIBERATE parameter "combinational_risefall" set to "1"
+LIBERATE parameter "default_unateness" set to "separate"
+LIBERATE parameter "extsim_deck_dir" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks"
+LIBERATE parameter "extsim_exclusive" set to "1"
+LIBERATE parameter "sim_estimate_duration" set to "0"
+LIBERATE parameter "conditional_expression" set to "separate"
+LIBERATE parameter "conditional_constraint" set to "1"
+LIBERATE parameter "constraint_delay_degrade_abstol" set to "1e-12"
+LIBERATE parameter "constraint_search_time_abstol" set to "2e-12"
+LIBERATE parameter "constraint_snap_to_bound" set to "1"
+LIBERATE parameter "constraint_delay_degrade" set to "0.1"
+LIBERATE parameter "reset_negative_constraint" set to "0"
+LIBERATE parameter "constraint_delay_degrade_abstol_max" set to "6e-11"
+LIBERATE parameter "constraint_glitch_hold" set to "0"
+LIBERATE parameter "constraint_glitch_peak" set to "0.2"
+LIBERATE parameter "constraint_glitch_peak_internal" set to "0.2"
+LIBERATE parameter "constraint_glitch_peak_mode" set to "0"
+LIBERATE parameter "constraint_output_load" set to "min"
+LIBERATE parameter "constraint_slew_degrade" set to "-1"
+LIBERATE parameter "mpw_criteria" set to "delay"
+LIBERATE parameter "mpw_table" set to "1"
+LIBERATE parameter "constraint_check_final_state" set to "3"
+LIBERATE parameter "mpw_delay_use_active_edge" set to "1"
+LIBERATE parameter "toggle_leakage_state" set to "1"
+LIBERATE parameter "power_subtract_output_load" set to "all"
+LIBERATE parameter "power_combinational_include_output" set to "0"
+LIBERATE parameter "power_sequential_include_complementary_output" set to "0"
+LIBERATE parameter "hidden_power" set to "1"
+LIBERATE parameter "leakage_add_input_pin" set to "1"
+LIBERATE parameter "leakage_mode" set to "1"
+LIBERATE parameter "force_default_group" set to "0"
+LIBERATE parameter "max_transition_for_outputs" set to "max"
+LIBERATE parameter "conditional_include_output" set to "0"
+LIBERATE parameter "time_unit" set to "1ns"
+LIBERATE parameter "capacitance_unit" set to "1pf"
+LIBERATE parameter "leakage_power_unit" set to "1uW"
+LIBERATE parameter "current_unit" set to "1mA"
+LIBERATE parameter "pulling_resistance_unit" set to "1kohm"
+LIBERATE parameter "capacitance_force_hidden" set to "1"
+LIBERATE parameter "voltage_map" set to "1"
+LIBERATE parameter "pin_based_power" set to "2"
+LIBERATE parameter "power_multi_output_binning_mode" set to "1"
+LIBERATE parameter "power_subtract_leakage" set to "1"
+LIBERATE parameter "subtract_hidden_power" set to "2"
+LIBERATE parameter "parse_ignore_duplicate_subckt" set to "1"
+WARNING (LIB-42): (set_var): Ignoring undefined variable 'user_data_apply_after_ldb_processing'.
+LIBERATE parameter "tmpdir" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/temp"
+LIBERATE parameter "slew_lower_rise" set to "0.1"
+LIBERATE parameter "slew_lower_fall" set to "0.1"
+LIBERATE parameter "slew_upper_rise" set to "0.9"
+LIBERATE parameter "slew_upper_fall" set to "0.9"
+LIBERATE parameter "measure_slew_lower_rise" set to "0.3"
+LIBERATE parameter "measure_slew_lower_fall" set to "0.3"
+LIBERATE parameter "measure_slew_upper_rise" set to "0.7"
+LIBERATE parameter "measure_slew_upper_fall" set to "0.7"
+LIBERATE parameter "delay_inp_rise" set to "0.5"
+LIBERATE parameter "delay_inp_fall" set to "0.5"
+LIBERATE parameter "delay_out_rise" set to "0.5"
+LIBERATE parameter "delay_out_fall" set to "0.5"
+LIBERATE parameter "def_arc_msg_level" set to "0"
+LIBERATE parameter "process_match_pins_to_ports" set to "1"
+LIBERATE parameter "max_transition" set to "4.8e-10"
+LIBERATE parameter "min_transition" set to "4e-13"
+LIBERATE parameter "min_output_cap" set to "1e-16"
+LIBERATE parameter "keep_dcap_leakage" set to "1"
+LIBERATE parameter "ldb_checkpoint_dir" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/checkpointdir/TT_25_1.1"
+LIBERATE parameter "extsim_model_include" set to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/models/tt.scs"
+LIBERATE parameter "default_unateness" overwritten to "merge" from "separate"
+INFO (LIB-26): The variable 'default_group_method' is no longer supported. Replace it with the 'set_default_group' command in the Tcl script and rerun.
+LIBERATE parameter "default_group_method" set to "0"
+LIBERATE parameter "default_const_method" set to "0"
+LIBERATE parameter "default_timing" set to "max"
+LIBERATE parameter "default_power" set to "min"
+INFO (LIB-26): The variable 'default_leakage' is no longer supported. Replace it with the 'set_default_group' command in the Tcl script and rerun.
+LIBERATE parameter "default_leakage" set to "avg"
+INFO (LIB-26): The variable 'default_capacitance' is no longer supported. Replace it with the 'set_default_group' command in the Tcl script and rerun.
+LIBERATE parameter "default_capacitance" set to "max"
+LIBERATE parameter "extsim_flatten_netlist" set to "0"
+LIBERATE parameter "parse_auto_define_leafcell" set to "0"
+INFO (LIB-511): (define_leafcell): Leafcell 'g45p1svt' (instance) has been identified with pin_position (0 1 2 3) mapped to (D G S B).
+INFO (LIB-511): (define_leafcell): Leafcell 'g45n1svt' (instance) has been identified with pin_position (0 1 2 3) mapped to (D G S B).
+LIBERATE parameter "extsim_deck_dir" overwritten to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks/TT_25_1.1/" from "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks"
+LIBERATE parameter "extsim_deck_dir" overwritten to "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks" from "/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/decks/TT_25_1.1/"
+LIBERATE parameter "extsim_save_failed" set to "all"
+LIBERATE parameter "extsim_save_passed" set to "all"
+LIBERATE parameter "extsim_save_verify" set to "2"
+*Warning* (set_gnd) : Gnd supply VSS has already been set, overriding previous value to 0
+*Warning* (set_vdd) : Vdd supply VDD has already been set, overriding previous value to 1.1
+LIBERATE parameter "packet_clients" set to "0"
+LIBERATE parameter "packet_mode" set to "arc"
+LIBERATE parameter "simulator" set to "spectre"
+LIBERATE parameter "char_library_skip_var_list" set to ""
+Start Characterizing Library at (Sat Mar 16 20:27:33 IST 2019)
+
+INFO (LIB-943): Finished reading netlist(s) at Mar 16 20:27:35.
+INFO (LIB-700): (Mar 16 20:27:35): ERROR (LMF-11005): License call failed for feature Spectre_char_opt, version 17.100 and quantity 1. The license server search path is defined as <none>. The FLEXnet error message is as follows,
+    FLEXnet ERROR(-5, 234, 0): No such feature exists.
+
+Run 'lic_error LMF-11005' for more information.
+INFO (LIB-711): Feature 'Virtuoso_Multi_mode_Simulation' exists in the license pool. The parameter 'spectre_use_mmsim_token_license' will be set to '1'.
+INFO (LIB-1008): (char_library): This LIBERATE release was qualified with MMSIM version '' but newer version '17.1.0.238.isr4' was detected. If MMSIM-related issues are found, update to the qualified MMSIM version and re-run.
+INFO (LIB-966): Using Spectre version 17.1.0.238.isr4 located at: /tools/cadence/SPECTRE171/tools/bin/spectre.
+*Info* Use temporary directory '/home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/temp'.
+*Info* (char_library) : set_var extsim_save_verify is enabled.  Running in non-distributed mode.  Only NLDM/CCS Timing/CCS Noise/ECSM Timing decks will be kept.
+Initializing Spice
+*Info* Adding 362 global models to Spice.
+Building library database
+Processing cell: NAND4BB1
+*Info* (char_library) : Cell NAND4BB1 found in file /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/netlist/NAND4BB1.cdl
+*Info* (char_library) : Cell NAND4BB1 found in file /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/netlist/NAND4BB1.cdl
+Determining template indices...
+INFO (LIB-440): (char_library): The series ratio between the first and second load index values (=251.04) is larger than the ratio between the rest of the indexes for cell: 'NAND4BB1', pin 'Y' which are limited by 'auto_index_load_ratio_cap' (=10). To improve this ratio, increase the min load index (see min_output_cap), specify the exact indexes to use (do not use the option -auto_index) or increase 'auto_index_load_ratio_cap' and rerun.
+
+Minimum transition index for the library: 4e-13 sec
+Maximum transition index for the library: 4.8e-10 sec
+Minimum output capacitance index for the library: 1e-16 F
+Autoindex finished.
+  MEM=1059 MB
+  MEM=1059 MB
+(Mar 16 20:27:59) Generating vectors: NAND4BB1
+  MEM=1060 MB
+
+Mar 16 20:27:59 Thread 29: Cell=NAND4BB1 (2%)    Pin=Y    Related=A    combinational  rise_transition 
+Mar 16 20:27:59 Thread 6: Cell=NAND4BB1 (4%)    Pin=Y    Related=B    combinational  rise_transition 
+Mar 16 20:27:59 Thread 5: Cell=NAND4BB1 (6%)    Pin=Y    Related=C    combinational  rise_transition 
+Mar 16 20:27:59 Thread 4: Cell=NAND4BB1 (9%)    Pin=Y    Related=D    combinational  rise_transition 
+Mar 16 20:27:59 Thread 3: Cell=NAND4BB1 (11%)   Pin=Y    Related=A    combinational  fall_transition 
+Mar 16 20:27:59 Thread 7: Cell=NAND4BB1 (13%)   Pin=Y    Related=B    combinational  fall_transition 
+Mar 16 20:27:59 Thread 2: Cell=NAND4BB1 (15%)   Pin=Y    Related=C    combinational  fall_transition 
+Mar 16 20:27:59 Thread 13: Cell=NAND4BB1 (18%)   Pin=Y    Related=D    combinational  fall_transition 
+Mar 16 20:27:59 Thread 15: Cell=NAND4BB1 (20%)   Pin=Y    Related=A    combinational  rise_power     
+Mar 16 20:27:59 Thread 11: Cell=NAND4BB1 (22%)   Pin=Y    Related=A    combinational  fall_power     
+Mar 16 20:27:59 Thread 14: Cell=NAND4BB1 (25%)   Pin=Y    Related=B    combinational  rise_power     
+Mar 16 20:27:59 Thread 0: Cell=NAND4BB1 (27%)   Pin=Y    Related=B    combinational  fall_power     
+Mar 16 20:27:59 Thread 18: Cell=NAND4BB1 (29%)   Pin=Y    Related=C    combinational  rise_power     
+Mar 16 20:27:59 Thread 20: Cell=NAND4BB1 (31%)   Pin=Y    Related=C    combinational  fall_power     
+Mar 16 20:27:59 Thread 17: Cell=NAND4BB1 (34%)   Pin=Y    Related=D    combinational  rise_power     
+Mar 16 20:27:59 Thread 8: Cell=NAND4BB1 (36%)   Pin=Y    Related=D    combinational  fall_power     
+Mar 16 20:27:59 Thread 22: Cell=NAND4BB1 (37%)   Pin=A    Related=     rising_edge    rise_power     
+Mar 16 20:27:59 Thread 19: Cell=NAND4BB1 (38%)   Pin=A    Related=     falling_edge   fall_power     
+Mar 16 20:27:59 Thread 10: Cell=NAND4BB1 (39%)   Pin=A    Related=     rising_edge    rise_power     
+Mar 16 20:27:59 Thread 24: Cell=NAND4BB1 (40%)   Pin=A    Related=     falling_edge   fall_power     
+Mar 16 20:27:59 Thread 26: Cell=NAND4BB1 (42%)   Pin=A    Related=     rising_edge    rise_power     
+Mar 16 20:27:59 Thread 16: Cell=NAND4BB1 (43%)   Pin=A    Related=     falling_edge   fall_power     
+Mar 16 20:27:59 Thread 12: Cell=NAND4BB1 (44%)   Pin=A    Related=     rising_edge    rise_power     
+Mar 16 20:27:59 Thread 25: Cell=NAND4BB1 (45%)   Pin=A    Related=     falling_edge   fall_power     
+Mar 16 20:27:59 Thread 28: Cell=NAND4BB1 (46%)   Pin=A    Related=     rising_edge    rise_power     
+Mar 16 20:27:59 Thread 27: Cell=NAND4BB1 (47%)   Pin=A    Related=     falling_edge   fall_power     
+Mar 16 20:27:59 Thread 23: Cell=NAND4BB1 (48%)   Pin=A    Related=     rising_edge    rise_power     
+Mar 16 20:27:59 Thread 9: Cell=NAND4BB1 (50%)   Pin=A    Related=     falling_edge   fall_power     
+Mar 16 20:27:59 Thread 21: Cell=NAND4BB1 (51%)   Pin=A    Related=     rising_edge    rise_power     
+Mar 16 20:27:59 Thread 1: Cell=NAND4BB1 (52%)   Pin=A    Related=     falling_edge   fall_power     
+Mar 16 20:28:06 Thread 0: Cell=NAND4BB1 (53%)   Pin=B    Related=     rising_edge    rise_power     
+Mar 16 20:28:07 Thread 11: Cell=NAND4BB1 (54%)   Pin=B    Related=     falling_edge   fall_power     
+Mar 16 20:28:07 Thread 2: Cell=NAND4BB1 (55%)   Pin=B    Related=     rising_edge    rise_power     
+Mar 16 20:28:08 Thread 3: Cell=NAND4BB1 (56%)   Pin=B    Related=     falling_edge   fall_power     
+Mar 16 20:28:08 Thread 29: Cell=NAND4BB1 (57%)   Pin=B    Related=     rising_edge    rise_power     
+Mar 16 20:28:08 Thread 8: Cell=NAND4BB1 (59%)   Pin=B    Related=     falling_edge   fall_power     
+Mar 16 20:28:08 Thread 5: Cell=NAND4BB1 (60%)   Pin=B    Related=     rising_edge    rise_power     
+Mar 16 20:28:08 Thread 6: Cell=NAND4BB1 (61%)   Pin=B    Related=     falling_edge   fall_power     
+Mar 16 20:28:08 Thread 15: Cell=NAND4BB1 (62%)   Pin=B    Related=     rising_edge    rise_power     
+Mar 16 20:28:08 Thread 13: Cell=NAND4BB1 (63%)   Pin=B    Related=     falling_edge   fall_power     
+Mar 16 20:28:08 Thread 17: Cell=NAND4BB1 (64%)   Pin=B    Related=     rising_edge    rise_power     
+Mar 16 20:28:08 Thread 20: Cell=NAND4BB1 (65%)   Pin=B    Related=     falling_edge   fall_power     
+Mar 16 20:28:08 Thread 18: Cell=NAND4BB1 (67%)   Pin=B    Related=     rising_edge    rise_power     
+Mar 16 20:28:08 Thread 4: Cell=NAND4BB1 (68%)   Pin=B    Related=     falling_edge   fall_power     
+Mar 16 20:28:08 Thread 14: Cell=NAND4BB1 (69%)   Pin=C    Related=     rising_edge    rise_power     
+Mar 16 20:28:08 Thread 7: Cell=NAND4BB1 (70%)   Pin=C    Related=     falling_edge   fall_power     
+Mar 16 20:28:10 Thread 24: Cell=NAND4BB1 (71%)   Pin=C    Related=     rising_edge    rise_power     
+Mar 16 20:28:11 Thread 16: Cell=NAND4BB1 (72%)   Pin=C    Related=     falling_edge   fall_power     
+Mar 16 20:28:11 Thread 1: Cell=NAND4BB1 (73%)   Pin=C    Related=     rising_edge    rise_power     
+Mar 16 20:28:11 Thread 21: Cell=NAND4BB1 (75%)   Pin=C    Related=     falling_edge   fall_power     
+Mar 16 20:28:11 Thread 22: Cell=NAND4BB1 (76%)   Pin=C    Related=     rising_edge    rise_power     
+Mar 16 20:28:11 Thread 12: Cell=NAND4BB1 (77%)   Pin=C    Related=     falling_edge   fall_power     
+Mar 16 20:28:11 Thread 9: Cell=NAND4BB1 (78%)   Pin=C    Related=     rising_edge    rise_power     
+Mar 16 20:28:11 Thread 27: Cell=NAND4BB1 (79%)   Pin=C    Related=     falling_edge   fall_power     
+Mar 16 20:28:11 Thread 28: Cell=NAND4BB1 (80%)   Pin=C    Related=     rising_edge    rise_power     
+Mar 16 20:28:11 Thread 19: Cell=NAND4BB1 (81%)   Pin=C    Related=     falling_edge   fall_power     
+Mar 16 20:28:11 Thread 25: Cell=NAND4BB1 (82%)   Pin=C    Related=     rising_edge    rise_power     
+Mar 16 20:28:11 Thread 26: Cell=NAND4BB1 (84%)   Pin=C    Related=     falling_edge   fall_power     
+Mar 16 20:28:11 Thread 23: Cell=NAND4BB1 (85%)   Pin=D    Related=     rising_edge    rise_power     
+Mar 16 20:28:11 Thread 10: Cell=NAND4BB1 (86%)   Pin=D    Related=     falling_edge   fall_power     
+Mar 16 20:28:13 Thread 0: Cell=NAND4BB1 (87%)   Pin=D    Related=     rising_edge    rise_power     
+Mar 16 20:28:14 Thread 8: Cell=NAND4BB1 (88%)   Pin=D    Related=     falling_edge   fall_power     
+Mar 16 20:28:14 Thread 3: Cell=NAND4BB1 (89%)   Pin=D    Related=     rising_edge    rise_power     
+Mar 16 20:28:14 Thread 11: Cell=NAND4BB1 (90%)   Pin=D    Related=     falling_edge   fall_power     
+Mar 16 20:28:14 Thread 29: Cell=NAND4BB1 (92%)   Pin=D    Related=     rising_edge    rise_power     
+Mar 16 20:28:14 Thread 5: Cell=NAND4BB1 (93%)   Pin=D    Related=     falling_edge   fall_power     
+Mar 16 20:28:14 Thread 6: Cell=NAND4BB1 (94%)   Pin=D    Related=     rising_edge    rise_power     
+Mar 16 20:28:14 Thread 2: Cell=NAND4BB1 (95%)   Pin=D    Related=     falling_edge   fall_power     
+Mar 16 20:28:14 Thread 7: Cell=NAND4BB1 (96%)   Pin=D    Related=     rising_edge    rise_power     
+Mar 16 20:28:15 Thread 13: Cell=NAND4BB1 (97%)   Pin=D    Related=     falling_edge   fall_power     
+Mar 16 20:28:15 Thread 18: Cell=NAND4BB1 (98%)   Pin=D    Related=     rising_edge    rise_power     
+Mar 16 20:28:15 Thread 4: Cell=NAND4BB1 (100%)  Pin=D    Related=     falling_edge   fall_power     
+Mar 16 20:28:15 Thread 14: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:15 Thread 17: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:15 Thread 15: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:15 Thread 20: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:16 Thread 20: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:16 Thread 14: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:16 Thread 15: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:16 Thread 17: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:17 Thread 24: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:18 Thread 1: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:18 Thread 21: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:18 Thread 25: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:18 Thread 16: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:18 Thread 12: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:18 Thread 19: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Mar 16 20:28:18 Thread 22: Cell=NAND4BB1 (100%)  Pin=     Related=     combinational  leakage_power  
+Performance statistics for NAND4BB1: Spectre cpu time = 281.6 seconds, total cpu time = 282.3 seconds, wall clock time = 47.0 seconds.
+
+  MEM=3017 MB
+Performance statistics (30 thread(s)):
+       Spectre cpu time =     0.08 hours (4 minutes 41 seconds)
+         Total PreProcessing time =     0.00 hours (0.00 seconds)
+         Total cpu time =     0.08 hours (4 minutes 42 seconds)
+        Wall clock time =     0.01 hours (47.00 seconds)
+
+Characterization finished at Sat Mar 16 20:28:26 2019
+
+Characterization statistics:
+
+Number of cells to characterize =    1
+Number of define_cell commands  =  579
+Number of passing cells         =    1
+Number of failing cells         =    0
+List of failing cells {}
+Finished Liberate Execution.
+LIBERATE parameter "overwrite_ldb" set to "1"
+Updating library database /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/ldb/TT_25_1.1.ldb.gz
+Memory usage: 3017 Mbytes
+
+LIBERATE parameter "mx_format_expand_buses" set to "0"
+LIBERATE parameter "ecsm_multi_stage_cap_mode" set to "0"
+LIBERATE parameter "ccsp_mode" set to "0"
+Writing library to /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/lib/TT_25_1.1_NLDM.lib, started at Sat Mar 16 20:28:26 IST 2019
+*Warning* (define_bundle) : Cell SPDFF2RX1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SDFF2RX2 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell SDFF4RX1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF2RX1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX2 does not exist so bundle definition for SI will be ignored!
+*Warning* (define_bundle) : Cell SDFF4RX2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF2RX2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF4RX1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SPDFF2RX1 does not exist so bundle definition for SI will be ignored!
+*Warning* (define_bundle) : Cell SPDFF2RX1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF4X2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell DFF4RX2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SDFF4RX2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SDFF4RX2 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF2RX1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SDFF2RX1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell DFF2RX2 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF2X1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SPDFF2RX2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell DFF4RX1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell SPDFF2RX1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF4X1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF4RX2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SPDFF2RX2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell DFF2X1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SDFF2RX1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF2X1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell SPDFF2RX2 does not exist so bundle definition for SI will be ignored!
+*Warning* (define_bundle) : Cell DFF4X1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF2X2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF4RX2 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell SPDFF2RX2 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF4X2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF2RX2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX1 does not exist so bundle definition for SI will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SDFF2RX2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SDFF2RX1 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell DFF4X1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SDFF2RX2 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF2X2 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell SDFF4RX1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell DFF4RX1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell DFF4X2 does not exist so bundle definition for Q will be ignored!
+*Warning* (define_bundle) : Cell SDFF4RX1 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell DFF2RX1 does not exist so bundle definition for D will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell DFF2X2 does not exist so bundle definition for QN will be ignored!
+*Warning* (define_bundle) : Cell SPDFF4RX2 does not exist so bundle definition for Q will be ignored!
+Writing .lib for cell NAND4BB1
+LIBERATE parameter "sdf_cond_warning" set to "0"
+LIBERATE parameter "ccsp_table_reduction" set to "1"
+Number of passing cells = 1
+Number of failing cells = 0
+List of failing cells {}
+Finished writing 1 cells to library /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/lib/TT_25_1.1_NLDM.lib at Sat Mar 16 20:28:26 IST 2019
+LIBERATE parameter "write_sens_nochange" set to "1"
+Writing datasheet for library TT_25_1.1 in html format to directory /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/datasheet/TT_25_1.1
+Writing file /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/datasheet/TT_25_1.1/NAND4BB1.html
+Writing Verilog to /home/vv2trainee2/Desktop/Deekshith/std_character/7x7_template_new/verilog/TT_25_1.1.v
+Writing Verilog for cell NAND4BB1
+Peak memory usage:          3 MB
+Peak virtual memory usage:  3 MB
+Peak physical memory usage: 0 MB
+Wall time      :    0.02 hours (56.00 seconds)
+LIBERATE exited on compute-srv2.eda.atme.in at Sat Mar 16 20:28:26 2019
+
